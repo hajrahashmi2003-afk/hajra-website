@@ -40,7 +40,6 @@
       z-index: -1;
     }
 
-    /* container */
     .container {
       max-width: 1280px;
       margin: 0 auto;
@@ -97,7 +96,6 @@
       text-underline-offset: 6px;
     }
 
-    /* buttons */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -135,7 +133,6 @@
       transform: translateY(-1px);
     }
 
-    /* section styling */
     section {
       padding: 3.5rem 0 3rem;
       opacity: 0;
@@ -171,7 +168,6 @@
       text-align: center;
     }
 
-    /* hero specific */
     .hero {
       text-align: center;
       padding: 1rem 0 2rem;
@@ -199,7 +195,6 @@
       font-size: 1rem;
     }
 
-    /* cards - clean, minimal, elevated */
     .grid-2, .grid-3, .grid-experience {
       display: grid;
       gap: 2rem;
@@ -210,11 +205,11 @@
     }
 
     .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     }
 
     .grid-experience {
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 
     .card {
@@ -251,7 +246,6 @@
       line-height: 1.5;
     }
 
-    /* testimonial cards */
     .testimonial-card {
       background: #ffffff;
       border-radius: 20px;
@@ -267,12 +261,6 @@
       line-height: 1.6;
     }
 
-    .client-name {
-      font-weight: 600;
-      color: #1f4f43;
-      margin-top: 0.75rem;
-    }
-
     .stars {
       color: #d4af37;
       letter-spacing: 2px;
@@ -280,7 +268,6 @@
       margin-top: 0.5rem;
     }
 
-    /* contact section professional */
     .contact-card {
       background: #f5faf8;
       border-radius: 32px;
@@ -312,20 +299,7 @@
       color: #6b8b7f;
     }
 
-    /* utilities */
-    .mt-2 {
-      margin-top: 1rem;
-    }
-    .mb-1 {
-      margin-bottom: 0.5rem;
-    }
-    .inline-list {
-      list-style: none;
-      padding-left: 0;
-    }
-    .inline-list li {
-      margin-bottom: 0.4rem;
-    }
+    .mt-2 { margin-top: 1rem; }
     hr {
       border: none;
       border-top: 1px solid #e2ede9;
@@ -333,22 +307,11 @@
     }
 
     @media (max-width: 780px) {
-      .container {
-        padding: 0 1.25rem;
-      }
-      .nav-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .hero h2 {
-        font-size: 2.2rem;
-      }
-      .section-title {
-        font-size: 1.8rem;
-      }
-      section {
-        padding: 2.5rem 0;
-      }
+      .container { padding: 0 1.25rem; }
+      .nav-wrapper { flex-direction: column; align-items: flex-start; }
+      .hero h2 { font-size: 2.2rem; }
+      .section-title { font-size: 1.8rem; }
+      section { padding: 2.5rem 0; }
     }
   </style>
 </head>
@@ -374,11 +337,11 @@
   <!-- Hero Section -->
   <section id="hero" class="hero show">
     <h2>Syeda Hajra</h2>
-    <div class="hero-tag">Psychologist | Integrative & Islamic Psychology</div>
+    <div class="hero-tag">Counselling Psychologist | Islamic Integrative Mental Health Practitioner</div>
     <p class="hero-description">
       Offering compassionate, evidence-based therapy rooted in modern psychological science and 
       Islamic principles of healing (nafs, tazkiyah, fitrah). Culturally sensitive care for emotional, 
-      psychological, and spiritual well-being.
+      psychological, and spiritual well-being. Currently advancing training in Islamic Psychology & Counselling at Al-Balagh Academy.
     </p>
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
       <a href="https://instagram.com/_your_handle_" class="btn btn-primary" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
@@ -386,7 +349,7 @@
     </div>
   </section>
 
-  <!-- About Section (professional + detailed) -->
+  <!-- About Section — fully aligned with CV: profile summary, approach, nafs/tazkiyah/fitrah -->
   <section id="about">
     <div class="text-center">
       <span class="section-title">About Me</span>
@@ -395,28 +358,28 @@
     <div class="grid-2">
       <div class="card">
         <div class="card-icon"><i class="fas fa-user-md"></i></div>
-        <h3>Clinical Background</h3>
-        <p>I am a counselling psychologist with extensive training in evidence-based modalities including CBT, person-centred therapy, and trauma-informed approaches. My work is grounded in ethical practice, informed consent, and ongoing professional development.</p>
+        <h3>Clinical & Academic Background</h3>
+        <p>I hold an M.Sc. in Clinical Psychology from Mount Carmel College, Bangalore, and am currently pursuing the Islamic Psychology & Counselling course at Al-Balagh Academy. My training includes evidence-based modalities: CBT, DBT, REBT, ACT, IFS, and trauma-informed approaches. I am experienced in working with marital and relational concerns, behavioural addictions, anxiety disorders, trauma-related distress, personality rigidity (including OCPD traits), and adjustment difficulties.</p>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
         <h3>Islamic Integrative Framework</h3>
-        <p>I integrate Islamic concepts of <strong>nafs (self)</strong>, <strong>tazkiyah (purification)</strong>, and <strong>fitrah (innate disposition)</strong> within contemporary therapeutic models. This creates a space where clients can explore psychological concerns without separating their spiritual identity.</p>
+        <p>I conceptualize distress through the lenses of <strong>nafs</strong> (self-regulation & internal conflict), <strong>tazkiyah</strong> (gradual psychological growth), <strong>fitrah</strong> (innate orientation toward balance), and <strong>ruh</strong> (existential meaning). Drawing upon Ibn Qayyim al-Jawziyyah's model of the self, I work with behavioural addictions and moral distress through compassion and accountability — not shame — while integrating contemporary psychology.</p>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fas fa-globe"></i></div>
-        <h3>Culturally Sensitive Care</h3>
-        <p>I honor the intersection of culture, faith, and mental health. My practice is inclusive, non-judgmental, and tailored to each individual's unique context, values, and goals.</p>
+        <h3>Culturally Sensitive & Palliative Care</h3>
+        <p>I provide psychological support in palliative care settings, addressing anticipatory grief, caregiver burden, and end-of-life emotional distress. My work is collaborative, respectful, and guided by ethical responsibility — always attentive to each client's spiritual and cultural context.</p>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
         <h3>Professional Ethos</h3>
-        <p>Confidentiality, empathy, and evidence-based practice form the foundation of every session. I am committed to supporting individuals, couples, and families in their journey toward resilience and wholeness.</p>
+        <p>Confidentiality, empathy, religio-cultural competence, and evidence-based practice form the foundation of every session. I work with individuals, couples, and families toward resilience, emotional regulation, and value-based meaningful living.</p>
       </div>
     </div>
   </section>
 
-  <!-- Services Section with more professional description -->
+  <!-- Services Section (expanded to reflect all areas from CV) -->
   <section id="services">
     <div class="text-center">
       <span class="section-title">Clinical Services</span>
@@ -426,37 +389,37 @@
       <div class="card">
         <div class="card-icon"><i class="fas fa-clipboard-list"></i></div>
         <h3>Psychological Assessments</h3>
-        <p>Comprehensive evaluations for emotional, cognitive, and behavioural concerns — providing diagnostic clarity and a roadmap for intervention.</p>
+        <p>Comprehensive evaluations for emotional, cognitive, and behavioural concerns — including diagnostic clarity, personality assessments, and formulation for therapy.</p>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fas fa-brain"></i></div>
         <h3>Therapy & Intervention</h3>
-        <p>Individual therapy for anxiety, depression, trauma, adjustment issues, and relational difficulties. Evidence-based and client-centred.</p>
+        <p>Individual therapy for anxiety, depression, trauma, OCPD traits, personality-related rigidity, adjustment issues, and behavioural addictions using CBT, DBT, ACT, and REBT.</p>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fas fa-pray"></i></div>
         <h3>Islamic Integrative Counselling</h3>
-        <p>Faith-integrated therapy that honors Islamic spirituality alongside clinical techniques — addressing spiritual distress, identity, and meaning-making.</p>
+        <p>Faith-integrated therapy addressing spiritual insecurity, religious guilt, moral distress, and meaning-making — inspired by Islamic psychology and Ibn Qayyim's model of self-regulation.</p>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fas fa-heart"></i></div>
         <h3>Couples & Family Therapy</h3>
-        <p>Supporting families and partners to improve communication, resolve conflicts, and strengthen relational bonds within a culturally attuned framework.</p>
+        <p>Supporting partners and families to improve communication, resolve relational conflicts, and rebuild trust within a culturally and spiritually attuned framework.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-hand-holding-heart"></i></div>
+        <h3>Palliative & Geriatric Support</h3>
+        <p>Psychological care for anticipatory grief, caregiver burden, adjustment to illness, and end-of-life emotional distress. Also experienced in geriatric cognitive assessments.</p>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fas fa-chalkboard"></i></div>
         <h3>Psychoeducation & Workshops</h3>
-        <p>Workshops on emotional resilience, Islamic self-care, mindfulness, and stress management — for groups, organisations, or community settings.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
-        <h3>Consultation & Supervision</h3>
-        <p>Clinical consultation for mental health practitioners seeking guidance on culturally and spiritually informed therapy approaches.</p>
+        <p>Workshops on emotional resilience, Islamic self-care, values-based living (ACT), and stress management for community and organizational settings.</p>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section (elevated + sleek) -->
+  <!-- Experience Section — fully updated from CV with correct dates, roles, and key details -->
   <section id="experience">
     <div class="text-center">
       <span class="section-title">Clinical Experience</span>
@@ -466,30 +429,36 @@
       <div class="card">
         <i class="fas fa-hospital-user card-icon"></i>
         <h3>Shifaa Hospital</h3>
-        <p>Current — Psychologist in the integrative mental health unit, providing assessments and therapy for diverse clinical populations.</p>
+        <p><strong>Psychologist</strong> (April 2026 – Present)</p>
+        <p>Provide individual, marital, and family counselling. Address behavioural addictions using Islamically informed cognitive-spiritual model. Manage anxiety, trauma, OCPD traits, and palliative psychosocial support including grief and caregiver burden.</p>
       </div>
       <div class="card">
         <i class="fas fa-hands card-icon"></i>
         <h3>Rehma Care</h3>
-        <p>Lead therapist for faith-informed counselling programs, community outreach, and mental health advocacy.</p>
+        <p><strong>Counselling Psychologist</strong> (Sept 2025 – March 2026)</p>
+        <p>Delivered individual, marital, and family therapy in multidisciplinary setting. Worked with spiritual insecurity, religious anxiety, and moral distress without reinforcing shame. Conducted culturally sensitive assessments and clinical documentation.</p>
       </div>
       <div class="card">
         <i class="fas fa-spa card-icon"></i>
-        <h3>Ruh Care</h3>
-        <p>Islamic psychology specialist — conducting individual therapy, group sessions, and psycho-spiritual interventions.</p>
+        <h3>Ruh Care (Muslim Therapist Directory)</h3>
+        <p><strong>Counselling Psychologist</strong> (Dec 2025 – Present)</p>
+        <p>Conceptualize distress beyond symptom-only frameworks. Address self-concept, perceived spiritual failure, religious guilt, and faith-related distress through holistic psychological, emotional, and spiritual wellbeing model.</p>
       </div>
       <div class="card">
         <i class="fas fa-heartbeat card-icon"></i>
-        <h3>Heart It Out</h3>
-        <p>Psychological associate, delivering trauma-informed therapy and psychological assessments for adults and adolescents.</p>
+        <h3>Heart It Out, Bangalore</h3>
+        <p><strong>Associate Psychologist</strong> (May 2025 – Jun 2025)</p>
+        <p>Worked with clients aged 17–28 presenting depression, trauma, suicidal ideation, OCPD, interpersonal conflicts, burnout. Trained in DBT, CBT, Person-Centered Therapy, Narrative Therapy, IFS, and grounding techniques.</p>
       </div>
     </div>
-    <div class="card" style="margin-top: 1.2rem; background: #f9fdfb; text-align: center;">
-      <p><strong>Education & Credentials:</strong> M.A. Clinical Psychology · Certified in Islamic Integrative Psychology · Ongoing advanced training in trauma-focused CBT and cross-cultural mental health.</p>
+    <div class="card" style="margin-top: 1.5rem; background: #f9fdfb;">
+      <p><strong>Additional Clinical Internships & Training:</strong> Nightingales Medical Trust (geriatric psychology), Bangalore Neuro Centre (marital therapy, DBT, CBT), Mind and Brain Hospital (facilitated 10+ CBT sessions for schizophrenia, psychosis, OCD, depression; trained in Biofeedback, TMS, Jacobson's relaxation).</p>
+      <p class="mt-2"><strong>Research & Publications:</strong> Comparative study of Dark Triad and Well-being between socioeconomic classes (peer-reviewed). Correlation between Emotional Intelligence and academic performance among medical students. Research intern at IIT Hyderabad & HACOS (literature review on health psychology; designed original PCOS-attachment study).</p>
+      <p class="mt-2"><strong>Current Professional Development:</strong> Pursuing <strong>Islamic Psychology & Counselling certification at Al-Balagh Academy</strong> (ongoing). Additional certifications: POSH Training, Counselling Skills (Oxford Home Study), Effective Communication, Neuroscience & Free Will.</p>
     </div>
   </section>
 
-  <!-- Testimonials Section: professional but still warm -->
+  <!-- Testimonials Section: client names removed as requested -->
   <section id="testimonials">
     <div class="text-center">
       <span class="section-title">Client Reflections</span>
@@ -499,38 +468,37 @@
       <div class="testimonial-card">
         <i class="fas fa-quote-left" style="color: #8eb3a8; font-size: 1.4rem;"></i>
         <div class="testimonial-text">“Syeda Hajra provides a rare combination of clinical rigour and deep empathy. Her ability to integrate Islamic perspectives without imposing them made me feel truly understood. I have grown immensely through our sessions.”</div>
-        <div class="client-name">— Amina R.</div>
         <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
       </div>
       <div class="testimonial-card">
         <i class="fas fa-quote-left" style="color: #8eb3a8; font-size: 1.4rem;"></i>
         <div class="testimonial-text">“I was looking for a therapist who would respect my faith while providing evidence-based interventions. Syeda exceeded my expectations. She is professional, insightful, and genuinely caring — a true healer.”</div>
-        <div class="client-name">— Omar K.</div>
         <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
       </div>
       <div class="testimonial-card">
         <i class="fas fa-quote-left" style="color: #8eb3a8; font-size: 1.4rem;"></i>
         <div class="testimonial-text">“She creates a warm, non-judgmental space where I could unpack difficult emotions. The Islamic integrative framework helped me reconnect with my spirituality as a source of strength.”</div>
-        <div class="client-name">— Fatima Z.</div>
         <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
       </div>
       <div class="testimonial-card">
         <i class="fas fa-quote-left" style="color: #8eb3a8; font-size: 1.4rem;"></i>
         <div class="testimonial-text">“Professional, ethical, and highly skilled. Syeda’s guidance during a difficult life transition was invaluable. I recommend her without hesitation to anyone seeking holistic mental health support.”</div>
-        <div class="client-name">— Yusuf M.</div>
         <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section: professional and clear call to action -->
+  <!-- Contact Section: clear, with phone and email matching CV -->
   <section id="contact">
     <div class="contact-card">
       <i class="fas fa-phone-alt" style="font-size: 1.8rem; color: #2c6e5c; margin-bottom: 0.5rem; display: inline-block;"></i>
       <h3 style="font-size: 1.7rem; margin-bottom: 0.25rem;">Let’s connect</h3>
-      <p style="max-width: 500px; margin: 0.5rem auto;">For therapy inquiries, collaborations, or supervision — reach out via email or Instagram.</p>
+      <p style="max-width: 500px; margin: 0.5rem auto;">For therapy inquiries, collaborations, or supervision — reach out via email, phone, or Instagram.</p>
       <div class="email-badge">
         <i class="far fa-envelope"></i> therapybyhajra@gmail.com
+      </div>
+      <div class="email-badge" style="background: #f5faf8;">
+        <i class="fas fa-phone-alt"></i> +91 9380824652
       </div>
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
         <a href="mailto:therapybyhajra@gmail.com" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Email directly</a>
@@ -543,14 +511,13 @@
 
   <footer>
     <p>© 2025 Syeda Hajra — Integrative & Islamic Psychology | Compassionate, evidence-based, and culturally attuned care</p>
-    <p style="margin-top: 0.5rem;">Registered practitioner | Confidential support for individuals, couples, and families</p>
+    <p style="margin-top: 0.5rem;">M.Sc. Clinical Psychology | Islamic Psychology & Counselling (Al-Balagh Academy, ongoing) | Registered practitioner</p>
   </footer>
 </div>
 
 <script>
-  // Intersection Observer for scroll reveal (professional subtle effect)
+  // Intersection Observer for scroll reveal
   const sections = document.querySelectorAll('section');
-  
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -560,12 +527,9 @@
   }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
   
   sections.forEach(sec => observer.observe(sec));
+  document.getElementById('hero')?.classList.add('show');
   
-  // Ensure hero is visible from start
-  const heroSec = document.getElementById('hero');
-  if(heroSec) heroSec.classList.add('show');
-  
-  // Smooth anchor navigation with offset for fixed header (though no sticky header, but improved experience)
+  // Smooth anchor navigation
   document.querySelectorAll('.nav-links a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
@@ -578,9 +542,6 @@
       }
     });
   });
-  
-  // update instagram placeholder note (optional)
-  console.log("Professional site ready — replace Instagram placeholder with actual username for complete branding.");
 </script>
 </body>
 </html>
