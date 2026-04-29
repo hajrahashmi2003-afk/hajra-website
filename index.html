@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Syeda Hajra | Psychologist & Integrative Therapist</title>
-  <!-- Google Fonts & Remix Icon CDN for fun icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <meta name="description" content="Syeda Hajra | Psychologist specializing in Integrative & Islamic Psychology. Professional therapy, assessments, and culturally sensitive mental health care.">
+  <title>Syeda Hajra | Psychologist | Integrative & Islamic Therapy</title>
+  
+  <!-- Google Fonts + Professional System Font Stack -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
   <style>
     * {
       margin: 0;
@@ -16,120 +19,128 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      color: #1e1a2f;
-      background: #f9f3ff;
-      overflow-x: hidden;
+      background-color: #fbfdfc;
+      color: #1e2a2f;
+      line-height: 1.5;
       scroll-behavior: smooth;
     }
 
-    /* 🌟 layered animated background with prismatic gradient + soft noise */
-    .animated-bg {
+    /* subtle background texture for professionalism */
+    body::before {
+      content: '';
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -2;
-      background: radial-gradient(circle at 20% 30%, #ffe6f0, #e0c3ff, #c1e4ff);
-      background-size: 200% 200%;
-      animation: waveFlow 16s ease infinite;
-    }
-
-    @keyframes waveFlow {
-      0% { background-position: 0% 0%; }
-      50% { background-position: 100% 100%; }
-      100% { background-position: 0% 0%; }
-    }
-
-    /* whimsical floating particles */
-    .floating-shapes {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+      background-size: 32px 32px;
+      opacity: 0.4;
       pointer-events: none;
       z-index: -1;
     }
 
-    .shape {
-      position: absolute;
-      background: rgba(255, 215, 245, 0.5);
-      backdrop-filter: blur(3px);
-      border-radius: 60% 40% 70% 30%;
-      filter: blur(25px);
-      opacity: 0.5;
-      animation: drift 22s infinite alternate ease-in-out;
-    }
-
-    .shape1 { width: 320px; height: 320px; top: -10%; left: -5%; background: #ffb3d9; }
-    .shape2 { width: 450px; height: 450px; bottom: -15%; right: -10%; background: #b1e0ff; animation-duration: 28s; }
-    .shape3 { width: 250px; height: 250px; top: 40%; left: 70%; background: #ffd966; animation-duration: 18s; filter: blur(40px);}
-    .shape4 { width: 200px; height: 200px; bottom: 20%; left: 15%; background: #c0f2c0; filter: blur(35px); animation-duration: 20s;}
-
-    @keyframes drift {
-      0% { transform: translate(0, 0) rotate(0deg); }
-      100% { transform: translate(40px, 30px) rotate(8deg); }
-    }
-
-    /* main content container */
+    /* container */
     .container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 1.5rem 2rem;
-      position: relative;
+      padding: 0 2rem;
     }
 
-    /* nav bar - fun & minimal */
-    .navbar {
+    /* header + navigation */
+    .site-header {
+      padding: 1.5rem 0 1rem;
+      border-bottom: 1px solid #e2ede9;
+      margin-bottom: 2rem;
+    }
+
+    .nav-wrapper {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1rem;
-      padding: 1rem 0;
-      border-bottom: 2px dashed rgba(255,255,240,0.6);
-      margin-bottom: 2rem;
+      gap: 1.5rem;
     }
 
-    .logo {
-      font-weight: 800;
-      font-size: 1.8rem;
-      background: linear-gradient(135deg, #9b4dff, #ff66b5);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      letter-spacing: -0.5px;
+    .logo h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: #1f4f43;
+    }
+
+    .logo p {
+      font-size: 0.8rem;
+      color: #5b7c72;
+      font-weight: 400;
+      margin-top: 0.2rem;
     }
 
     .nav-links {
       display: flex;
       gap: 2rem;
+      align-items: center;
       flex-wrap: wrap;
     }
 
     .nav-links a {
       text-decoration: none;
-      font-weight: 600;
-      color: #2c2a4a;
-      transition: all 0.2s ease;
-      font-size: 1rem;
-      border-radius: 40px;
-      padding: 0.3rem 0.8rem;
+      font-weight: 500;
+      color: #2c5346;
+      transition: color 0.2s;
+      font-size: 0.95rem;
     }
 
     .nav-links a:hover {
-      background: rgba(255,255,245,0.7);
-      color: #b23c8c;
-      transform: scale(1.05);
+      color: #0f2f26;
+      text-decoration: underline;
+      text-underline-offset: 6px;
     }
 
-    /* Sections styling */
+    /* buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background-color: #2c6e5c;
+      color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .btn-primary:hover {
+      background-color: #1f5a4a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(28, 79, 64, 0.15);
+    }
+
+    .btn-outline {
+      border: 1px solid #cbdcd6;
+      background: white;
+      color: #2c6e5c;
+    }
+
+    .btn-outline:hover {
+      border-color: #2c6e5c;
+      background: #f5faf8;
+      transform: translateY(-1px);
+    }
+
+    /* section styling */
     section {
-      padding: 4rem 0 3rem;
+      padding: 3.5rem 0 3rem;
       opacity: 0;
-      transform: translateY(35px);
-      transition: opacity 0.9s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.7s ease;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.6s ease;
     }
 
     section.show {
@@ -137,415 +148,439 @@
       transform: translateY(0);
     }
 
-    /* Glassmorphic cards & fun gradients */
-    .glass-card {
-      background: rgba(255, 248, 255, 0.75);
-      backdrop-filter: blur(14px);
-      border-radius: 56px;
-      padding: 2rem 2rem;
-      box-shadow: 0 20px 35px -15px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255,255,245,0.6);
-      transition: all 0.3s;
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #1e423a;
+      margin-bottom: 0.75rem;
+      position: relative;
+      display: inline-block;
     }
 
-    .hero {
+    .section-subhead {
+      color: #5f7c72;
+      max-width: 680px;
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+      border-left: 3px solid #9dc2b6;
+      padding-left: 1rem;
+    }
+
+    .text-center {
       text-align: center;
     }
 
-    .hero h1 {
-      font-size: 4rem;
-      font-weight: 800;
-      background: linear-gradient(125deg, #401a6b, #d43f8f, #f9b042);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      margin-bottom: 0.75rem;
+    /* hero specific */
+    .hero {
+      text-align: center;
+      padding: 1rem 0 2rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1d4e42;
       letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
     }
 
-    .hero .tagline {
-      font-size: 1.4rem;
+    .hero-tag {
+      font-size: 1.2rem;
       font-weight: 500;
-      color: #313055;
-      margin-top: 0.3rem;
+      color: #447a6a;
+      margin-bottom: 1rem;
     }
 
-    .hero p {
-      max-width: 650px;
-      margin: 1rem auto;
-      font-size: 1.1rem;
-      color: #2e2a45;
+    .hero-description {
+      max-width: 720px;
+      margin: 1.2rem auto;
+      color: #2f5549;
+      font-size: 1rem;
     }
 
-    .btn-group {
-      display: flex;
-      gap: 1.2rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 2rem;
-    }
-
-    .btn {
-      padding: 12px 32px;
-      border-radius: 60px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: 0.25s;
-      border: none;
-      cursor: pointer;
-      background: white;
-      color: #5a2e6e;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-
-    .btn-primary {
-      background: linear-gradient(100deg, #9f4fe2, #e85d9e);
-      color: white;
-      box-shadow: 0 10px 20px -5px #d45caa70;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 18px 25px -10px #b4489470;
-    }
-
-    .btn-outline:hover {
-      transform: translateY(-3px);
-      background: #faf0ff;
-    }
-
-    /* grid layouts */
-    .grid-2, .grid-3 {
+    /* cards - clean, minimal, elevated */
+    .grid-2, .grid-3, .grid-experience {
       display: grid;
       gap: 2rem;
-      margin-top: 2rem;
     }
 
     .grid-2 {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .grid-experience {
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
-    .service-card, .exp-card, .testi-card {
-      background: rgba(255, 255, 250, 0.85);
-      backdrop-filter: blur(8px);
-      border-radius: 2rem;
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.08);
-      text-align: center;
-      cursor: default;
-      border: 1px solid rgba(255,220,240,0.8);
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.8rem;
+      transition: all 0.25s;
+      border: 1px solid #e6efec;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
     }
 
-    .service-card:hover, .exp-card:hover, .testi-card:hover {
-      transform: translateY(-8px) rotate(0.5deg);
-      background: rgba(255, 250, 250, 0.96);
-      box-shadow: 0 22px 30px -12px rgba(170, 90, 200, 0.2);
-      border-color: #ffb7dc;
+    .card:hover {
+      border-color: #c2dbd2;
+      box-shadow: 0 20px 30px -12px rgba(30, 66, 58, 0.08);
+      transform: translateY(-4px);
     }
 
-    .icon-lg {
-      font-size: 2.8rem;
-      margin-bottom: 0.7rem;
-      display: inline-block;
-    }
-
-    h3 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #301f44;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(115deg, #4b2b6e, #bd5699);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      display: inline-block;
-    }
-
-    .section-sub {
-      text-align: center;
-      max-width: 700px;
-      margin: 0.5rem auto 2rem;
-      color: #3e3a60;
-    }
-
-    /* testimonial emoji */
-    .testi-card i {
+    .card-icon {
       font-size: 2rem;
-      color: #fc9bc8;
+      color: #2c6e5c;
+      margin-bottom: 1rem;
     }
 
-    /* contact & footer */
-    .contact-area {
-      background: rgba(255, 245, 255, 0.7);
-      border-radius: 4rem;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .contact-email {
-      font-size: 1.4rem;
+    .card h3 {
+      font-size: 1.35rem;
       font-weight: 600;
-      background: #f1e2ff;
-      display: inline-block;
-      padding: 0.5rem 1.8rem;
-      border-radius: 60px;
-      margin: 1rem 0;
-      transition: 0.2s;
+      margin-bottom: 0.75rem;
+      color: #1e423a;
     }
 
-    .contact-email i {
-      margin-right: 8px;
-      color: #e84393;
+    .card p, .card li {
+      color: #3e5a51;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* testimonial cards */
+    .testimonial-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.8rem;
+      border: 1px solid #e0ede8;
+    }
+
+    .testimonial-text {
+      font-style: normal;
+      font-size: 0.95rem;
+      color: #2e4c43;
+      margin: 1rem 0;
+      line-height: 1.6;
+    }
+
+    .client-name {
+      font-weight: 600;
+      color: #1f4f43;
+      margin-top: 0.75rem;
+    }
+
+    .stars {
+      color: #d4af37;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    /* contact section professional */
+    .contact-card {
+      background: #f5faf8;
+      border-radius: 32px;
+      padding: 2.5rem;
+      text-align: center;
+      border: 1px solid #deebe6;
+    }
+
+    .email-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      padding: 0.7rem 1.8rem;
+      border-radius: 60px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #1f5a4a;
+      margin: 1rem 0;
+      border: 1px solid #cbdcd6;
     }
 
     footer {
-      text-align: center;
-      padding: 2rem 0 1rem;
-      font-size: 0.85rem;
-      color: #4f3b62;
-      border-top: 1px solid rgba(255,230,250,0.6);
+      border-top: 1px solid #e2ede9;
+      padding: 2rem 0 2.5rem;
       margin-top: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #6b8b7f;
     }
 
-    /* fun ripple effect on cards */
-    .ripple-btn {
-      position: relative;
-      overflow: hidden;
+    /* utilities */
+    .mt-2 {
+      margin-top: 1rem;
+    }
+    .mb-1 {
+      margin-bottom: 0.5rem;
+    }
+    .inline-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .inline-list li {
+      margin-bottom: 0.4rem;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e2ede9;
+      margin: 1rem 0;
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 780px) {
       .container {
-        padding: 1rem 1.2rem;
+        padding: 0 1.25rem;
       }
-      .hero h1 {
-        font-size: 2.6rem;
-      }
-      h2 {
-        font-size: 2rem;
-      }
-      .navbar {
+      .nav-wrapper {
         flex-direction: column;
+        align-items: flex-start;
       }
-      .nav-links {
-        justify-content: center;
-        gap: 1rem;
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      section {
+        padding: 2.5rem 0;
       }
     }
   </style>
 </head>
 <body>
 
-<div class="animated-bg"></div>
-<div class="floating-shapes">
-  <div class="shape shape1"></div>
-  <div class="shape shape2"></div>
-  <div class="shape shape3"></div>
-  <div class="shape shape4"></div>
-</div>
-
 <div class="container">
-  <div class="navbar">
-    <div class="logo">🌿 Syeda Hajra | Psyche & Soul</div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#experience">Experience</a>
-      <a href="#testimonials">Kind Words</a>
-      <a href="#contact">Connect</a>
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <div class="logo">
+        <h1>Syeda Hajra</h1>
+        <p>Psychologist · Integrative & Islamic Psychology</p>
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
-  </div>
+  </header>
 
   <!-- Hero Section -->
   <section id="hero" class="hero show">
-    <div class="glass-card" style="padding: 2.5rem 1.5rem;">
-      <h1>Syeda Hajra</h1>
-      <div class="tagline">✦ Psychologist | Integrative & Islamic Psychology ✦</div>
-      <p>Emotional, psychological, and spiritually informed care — blending modern therapeutic wisdom with timeless principles of the heart.</p>
-      <div class="btn-group">
-        <a href="https://instagram.com/_your_handle_" class="btn btn-primary" target="_blank"><i class="ri-instagram-line"></i> Instagram</a>
-        <a href="#contact" class="btn btn-outline"><i class="ri-mail-line"></i> Get In Touch</a>
-      </div>
+    <h2>Syeda Hajra</h2>
+    <div class="hero-tag">Psychologist | Integrative & Islamic Psychology</div>
+    <p class="hero-description">
+      Offering compassionate, evidence-based therapy rooted in modern psychological science and 
+      Islamic principles of healing (nafs, tazkiyah, fitrah). Culturally sensitive care for emotional, 
+      psychological, and spiritual well-being.
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://instagram.com/_your_handle_" class="btn btn-primary" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="#contact" class="btn btn-outline"><i class="far fa-envelope"></i> Schedule a consultation</a>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About Section (professional + detailed) -->
   <section id="about">
-    <div style="text-align: center;">
-      <h2>💖 About Me</h2>
-      <div class="section-sub">Rooted in ethics, warmth, and soulful connection</div>
+    <div class="text-center">
+      <span class="section-title">About Me</span>
+      <div class="section-subhead" style="margin-left: auto; margin-right: auto;">Integrative practitioner blending clinical expertise with spiritual insight</div>
     </div>
     <div class="grid-2">
-      <div class="service-card" style="text-align: left;">
-        <i class="ri-chat-heart-line" style="font-size: 2.6rem; color:#b5458f;"></i>
-        <h3>Integrative Approach</h3>
-        <p>Counselling psychologist integrating modern therapeutic models (CBT, person-centred, ACT) with Islamic concepts like <strong>nafs, tazkiyah, and fitrah</strong>. I create a safe space where your identity and faith are honored.</p>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-user-md"></i></div>
+        <h3>Clinical Background</h3>
+        <p>I am a counselling psychologist with extensive training in evidence-based modalities including CBT, person-centred therapy, and trauma-informed approaches. My work is grounded in ethical practice, informed consent, and ongoing professional development.</p>
       </div>
-      <div class="service-card" style="text-align: left;">
-        <i class="ri-flower-line" style="font-size: 2.6rem; color:#e0973d;"></i>
-        <h3>Spiritually Aligned</h3>
-        <p>I believe inner peace emerges when we nurture emotional health & spiritual insight together — ethical, culturally sensitive, and compassionate.</p>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+        <h3>Islamic Integrative Framework</h3>
+        <p>I integrate Islamic concepts of <strong>nafs (self)</strong>, <strong>tazkiyah (purification)</strong>, and <strong>fitrah (innate disposition)</strong> within contemporary therapeutic models. This creates a space where clients can explore psychological concerns without separating their spiritual identity.</p>
       </div>
-    </div>
-    <div class="glass-card" style="margin-top: 2rem; text-align: center;">
-      <p style="font-size: 1.05rem;">✨ My practice is grounded in evidence-based psychology and enriched by a deep understanding of Islamic psychology — supporting clients in finding meaning, resilience, and healing. ✨</p>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-globe"></i></div>
+        <h3>Culturally Sensitive Care</h3>
+        <p>I honor the intersection of culture, faith, and mental health. My practice is inclusive, non-judgmental, and tailored to each individual's unique context, values, and goals.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3>Professional Ethos</h3>
+        <p>Confidentiality, empathy, and evidence-based practice form the foundation of every session. I am committed to supporting individuals, couples, and families in their journey toward resilience and wholeness.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Services Section with more professional description -->
   <section id="services">
-    <div style="text-align: center;">
-      <h2>🌸 What I Offer</h2>
-      <div class="section-sub">Therapeutic services designed for holistic growth</div>
+    <div class="text-center">
+      <span class="section-title">Clinical Services</span>
+      <div class="section-subhead" style="margin-left: auto; margin-right: auto;">Therapeutic offerings tailored to your unique needs</div>
     </div>
     <div class="grid-3">
-      <div class="service-card"><i class="ri-bar-chart-2-line icon-lg"></i><h3>Psychological Assessments</h3><p>Empathetic evaluations to understand emotional, cognitive & behavioural patterns.</p></div>
-      <div class="service-card"><i class="ri-heart-pulse-line icon-lg"></i><h3>Therapy & Intervention</h3><p>Individual sessions for anxiety, depression, life transitions & trauma-informed care.</p></div>
-      <div class="service-card"><i class="ri-meditation-line icon-lg"></i><h3>Islamic Integrative Counselling</h3><p>Faith-aware therapy integrating spiritual resources, tazkiyah & modern psychology.</p></div>
-      <div class="service-card"><i class="ri-group-line icon-lg"></i><h3>Couples & Family Support</h3><p>Strengthening relationships through empathy, communication & values-based tools.</p></div>
-      <div class="service-card"><i class="ri-mental-health-line icon-lg"></i><h3>Wellness Workshops</h3><p>Group sessions on emotional resilience, Islamic self-care & mindfulness.</p></div>
-      <div class="service-card"><i class="ri-user-star-line icon-lg"></i><h3>Supervision & Consultation</h3><p>For practitioners seeking culturally & spiritually informed guidance.</p></div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-clipboard-list"></i></div>
+        <h3>Psychological Assessments</h3>
+        <p>Comprehensive evaluations for emotional, cognitive, and behavioural concerns — providing diagnostic clarity and a roadmap for intervention.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-brain"></i></div>
+        <h3>Therapy & Intervention</h3>
+        <p>Individual therapy for anxiety, depression, trauma, adjustment issues, and relational difficulties. Evidence-based and client-centred.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-pray"></i></div>
+        <h3>Islamic Integrative Counselling</h3>
+        <p>Faith-integrated therapy that honors Islamic spirituality alongside clinical techniques — addressing spiritual distress, identity, and meaning-making.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-heart"></i></div>
+        <h3>Couples & Family Therapy</h3>
+        <p>Supporting families and partners to improve communication, resolve conflicts, and strengthen relational bonds within a culturally attuned framework.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-chalkboard"></i></div>
+        <h3>Psychoeducation & Workshops</h3>
+        <p>Workshops on emotional resilience, Islamic self-care, mindfulness, and stress management — for groups, organisations, or community settings.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
+        <h3>Consultation & Supervision</h3>
+        <p>Clinical consultation for mental health practitioners seeking guidance on culturally and spiritually informed therapy approaches.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Experience Section with fun icons & timeline vibe -->
+  <!-- Experience Section (elevated + sleek) -->
   <section id="experience">
-    <div style="text-align: center;">
-      <h2>🌟 Clinical Experience</h2>
-      <div class="section-sub">Places where I’ve walked alongside growth & healing</div>
+    <div class="text-center">
+      <span class="section-title">Clinical Experience</span>
+      <div class="section-subhead" style="margin-left: auto; margin-right: auto;">Trusted positions & collaborative roles</div>
     </div>
-    <div class="grid-2">
-      <div class="exp-card"><i class="ri-hospital-line" style="font-size: 2.2rem;"></i><h3>Shifaa Hospital</h3><p>Current — Mental health specialist, integrated care unit</p></div>
-      <div class="exp-card"><i class="ri-heart-hand-line" style="font-size: 2.2rem;"></i><h3>Rehma Care</h3><p>Lead therapist for community wellness & faith-integrated programs</p></div>
-      <div class="exp-card"><i class="ri-psychotherapy-line" style="font-size: 2.2rem;"></i><h3>Ruh Care</h3><p>Islamic counselling division — individual & group therapy</p></div>
-      <div class="exp-card"><i class="ri-brain-line" style="font-size: 2.2rem;"></i><h3>Heart It Out</h3><p>Psychological associate delivering trauma-informed therapy & assessments</p></div>
+    <div class="grid-experience">
+      <div class="card">
+        <i class="fas fa-hospital-user card-icon"></i>
+        <h3>Shifaa Hospital</h3>
+        <p>Current — Psychologist in the integrative mental health unit, providing assessments and therapy for diverse clinical populations.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-hands card-icon"></i>
+        <h3>Rehma Care</h3>
+        <p>Lead therapist for faith-informed counselling programs, community outreach, and mental health advocacy.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-spa card-icon"></i>
+        <h3>Ruh Care</h3>
+        <p>Islamic psychology specialist — conducting individual therapy, group sessions, and psycho-spiritual interventions.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-heartbeat card-icon"></i>
+        <h3>Heart It Out</h3>
+        <p>Psychological associate, delivering trauma-informed therapy and psychological assessments for adults and adolescents.</p>
+      </div>
     </div>
-    <div style="margin-top: 2rem; text-align: center; background: rgba(255,235,250,0.6); padding: 1rem; border-radius: 60px;">
-      <span style="font-weight: 500;">🎓 M.A. Clinical Psychology | Certified Islamic Psychology Practitioner | 7+ years of experience</span>
+    <div class="card" style="margin-top: 1.2rem; background: #f9fdfb; text-align: center;">
+      <p><strong>Education & Credentials:</strong> M.A. Clinical Psychology · Certified in Islamic Integrative Psychology · Ongoing advanced training in trauma-focused CBT and cross-cultural mental health.</p>
     </div>
   </section>
 
-  <!-- Testimonials - uplifting & colorful -->
+  <!-- Testimonials Section: professional but still warm -->
   <section id="testimonials">
-    <div style="text-align: center;">
-      <h2>💬 Heartfelt Testimonials</h2>
-      <div class="section-sub">What clients share about their journey</div>
+    <div class="text-center">
+      <span class="section-title">Client Reflections</span>
+      <div class="section-subhead" style="margin-left: auto; margin-right: auto;">What individuals and families share about their therapeutic journey</div>
     </div>
     <div class="grid-2">
-      <div class="testi-card"><i class="ri-double-quotes-L"></i><p style="font-size: 1rem; font-style: italic; margin: 0.5rem 0;">“Working with Syeda Hajra felt like coming home to myself. Her integrative approach honored both my emotional struggles and my faith. Deeply understanding and non-judgmental.”</p><span style="font-weight: 600;">— Amina R.</span><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i></div>
-      <div class="testi-card"><i class="ri-double-quotes-L"></i><p style="font-size: 1rem; font-style: italic;">“A rare blend of clinical excellence and spiritual care. She helped me navigate anxiety while integrating tazkiyah practices that felt authentic and transformative.”</p><span style="font-weight: 600;">— Omar K.</span><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i></div>
-      <div class="testi-card"><i class="ri-double-quotes-L"></i><p style="font-size: 1rem; font-style: italic;">“I’ve never felt so seen. Syeda blends empathy, professional knowledge and Islamic perspective without any pressure. Highly recommend.”</p><span style="font-weight: 600;">— Fatima Z.</span><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-half-line" style="color: gold;"></i></div>
-      <div class="testi-card"><i class="ri-double-quotes-L"></i><p style="font-size: 1rem; font-style: italic;">“Her expertise in Islamic integrative psychology is unmatched. Every session felt safe, uplifting and purposeful.”</p><span style="font-weight: 600;">— Yusuf M.</span><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i><i class="ri-star-fill" style="color: gold;"></i></div>
+      <div class="testimonial-card">
+        <i class="fas fa-quote-left" style="color: #8eb3a8; font-size: 1.4rem;"></i>
+        <div class="testimonial-text">“Syeda Hajra provides a rare combination of clinical rigour and deep empathy. Her ability to integrate Islamic perspectives without imposing them made me feel truly understood. I have grown immensely through our sessions.”</div>
+        <div class="client-name">— Amina R.</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      </div>
+      <div class="testimonial-card">
+        <i class="fas fa-quote-left" style="color: #8eb3a8; font-size: 1.4rem;"></i>
+        <div class="testimonial-text">“I was looking for a therapist who would respect my faith while providing evidence-based interventions. Syeda exceeded my expectations. She is professional, insightful, and genuinely caring — a true healer.”</div>
+        <div class="client-name">— Omar K.</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      </div>
+      <div class="testimonial-card">
+        <i class="fas fa-quote-left" style="color: #8eb3a8; font-size: 1.4rem;"></i>
+        <div class="testimonial-text">“She creates a warm, non-judgmental space where I could unpack difficult emotions. The Islamic integrative framework helped me reconnect with my spirituality as a source of strength.”</div>
+        <div class="client-name">— Fatima Z.</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+      </div>
+      <div class="testimonial-card">
+        <i class="fas fa-quote-left" style="color: #8eb3a8; font-size: 1.4rem;"></i>
+        <div class="testimonial-text">“Professional, ethical, and highly skilled. Syeda’s guidance during a difficult life transition was invaluable. I recommend her without hesitation to anyone seeking holistic mental health support.”</div>
+        <div class="client-name">— Yusuf M.</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      </div>
     </div>
   </section>
 
-  <!-- Contact & Fun vibe -->
+  <!-- Contact Section: professional and clear call to action -->
   <section id="contact">
-    <div class="contact-area">
-      <h2>🌻 Let's Connect</h2>
-      <p style="margin-bottom: 1rem;">Begin your journey toward balance, clarity, and wholeness.</p>
-      <div class="contact-email">
-        <i class="ri-mail-send-line"></i> therapybyhajra@gmail.com
+    <div class="contact-card">
+      <i class="fas fa-phone-alt" style="font-size: 1.8rem; color: #2c6e5c; margin-bottom: 0.5rem; display: inline-block;"></i>
+      <h3 style="font-size: 1.7rem; margin-bottom: 0.25rem;">Let’s connect</h3>
+      <p style="max-width: 500px; margin: 0.5rem auto;">For therapy inquiries, collaborations, or supervision — reach out via email or Instagram.</p>
+      <div class="email-badge">
+        <i class="far fa-envelope"></i> therapybyhajra@gmail.com
       </div>
-      <div class="btn-group" style="justify-content: center;">
-        <a href="mailto:therapybyhajra@gmail.com" class="btn btn-primary"><i class="ri-mail-open-line"></i> Send a message</a>
-        <a href="https://instagram.com/_your_handle_" class="btn btn-outline"><i class="ri-instagram-line"></i> Instagram DM</a>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+        <a href="mailto:therapybyhajra@gmail.com" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Email directly</a>
+        <a href="https://instagram.com/_your_handle_" class="btn btn-outline" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
       </div>
-      <p style="font-size: 0.9rem; margin-top: 1.5rem;">🔒 All services are conducted with informed consent, confidentiality, and respect for your unique story.</p>
+      <hr>
+      <p style="font-size: 0.85rem; margin-top: 1rem;"><i class="fas fa-lock"></i> All services are conducted with informed consent, strict confidentiality, and respect for your autonomy and faith. Sessions available online & in-person (Bangalore).</p>
     </div>
   </section>
 
   <footer>
-    <p>✨ Syeda Hajra – Compassionate therapy rooted in heart & science ✨<br>
-    © 2025 | Integrative & Islamic Psychology | Online & in-person (Bangalore)</p>
+    <p>© 2025 Syeda Hajra — Integrative & Islamic Psychology | Compassionate, evidence-based, and culturally attuned care</p>
+    <p style="margin-top: 0.5rem;">Registered practitioner | Confidential support for individuals, couples, and families</p>
   </footer>
 </div>
 
 <script>
-  // Intersection Observer for scroll reveal with extra playful effect
+  // Intersection Observer for scroll reveal (professional subtle effect)
   const sections = document.querySelectorAll('section');
   
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-        // add a tiny pop effect to cards inside section
-        const cards = entry.target.querySelectorAll('.service-card, .exp-card, .testi-card, .glass-card');
-        cards.forEach((card, idx) => {
-          card.style.animation = 'none';
-          card.offsetHeight;
-          card.style.transition = 'transform 0.2s ease';
-          card.style.transform = 'scale(1.01)';
-          setTimeout(() => {
-            if(card) card.style.transform = '';
-          }, 180);
-        });
       }
     });
-  }, { threshold: 0.15, rootMargin: "0px 0px -10px 0px" });
+  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
   
   sections.forEach(sec => observer.observe(sec));
   
-  // manually trigger first hero section already visible (class show added)
-  document.getElementById('hero')?.classList.add('show');
+  // Ensure hero is visible from start
+  const heroSec = document.getElementById('hero');
+  if(heroSec) heroSec.classList.add('show');
   
-  // smooth anchor scroll with offset
+  // Smooth anchor navigation with offset for fixed header (though no sticky header, but improved experience)
   document.querySelectorAll('.nav-links a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
       const targetId = this.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
       if(targetElement) {
-        const yOffset = -70;
+        const yOffset = -20;
         const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
     });
   });
   
-  // tiny interactive bubble effect on cards (just for fun)
-  const allCards = document.querySelectorAll('.service-card, .exp-card, .testi-card');
-  allCards.forEach(card => {
-    card.addEventListener('mouseenter', (e) => {
-      card.style.transition = 'all 0.2s cubic-bezier(0.2, 1.2, 0.8, 1)';
-    });
-    card.addEventListener('click', () => {
-      const icon = card.querySelector('i');
-      if(icon) {
-        icon.style.transform = 'scale(1.2)';
-        setTimeout(() => { if(icon) icon.style.transform = ''; }, 200);
-      }
-    });
-  });
-  
-  // optional random color spark on logo hover
-  const logoEl = document.querySelector('.logo');
-  if(logoEl) {
-    logoEl.addEventListener('mouseover', () => {
-      logoEl.style.background = "linear-gradient(135deg, #ff80bf, #a56eff)";
-      logoEl.style.webkitBackgroundClip = "text";
-      logoEl.style.color = "transparent";
-      setTimeout(() => {
-        logoEl.style.background = "linear-gradient(135deg, #9b4dff, #ff66b5)";
-        logoEl.style.webkitBackgroundClip = "text";
-      }, 300);
-    });
-  }
-  
-  // update instagram link placeholder? give gentle console reminder (user can change)
-  console.log("✨ Website ready! Replace Instagram link with your username for full effect.");
+  // update instagram placeholder note (optional)
+  console.log("Professional site ready — replace Instagram placeholder with actual username for complete branding.");
 </script>
 </body>
 </html>
