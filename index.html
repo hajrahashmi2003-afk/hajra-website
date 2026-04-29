@@ -8,36 +8,85 @@
 
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: #fafafa;
-      color: #333;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* 🌈 Animated background */
+    body::before {
+      content: "";
+      position: fixed;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, #6366f1, #a855f7, #ec4899, #22d3ee);
+      animation: gradientMove 10s infinite linear;
+      z-index: -2;
+    }
+
+    @keyframes gradientMove {
+      0% { transform: translate(0,0); }
+      50% { transform: translate(-25%, -25%); }
+      100% { transform: translate(0,0); }
+    }
+
+    /* ✨ floating blobs */
+    .blob {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(255,255,255,0.1);
+      filter: blur(80px);
+      border-radius: 50%;
+      animation: float 8s infinite ease-in-out;
+    }
+
+    .blob:nth-child(1) { top: 10%; left: 10%; }
+    .blob:nth-child(2) { bottom: 10%; right: 10%; }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-40px); }
     }
 
     section {
-      padding: 80px 20px;
+      padding: 100px 20px;
       text-align: center;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
     }
 
-    .hero {
-      background: linear-gradient(135deg, #e0e7ff, #fce7f3);
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     h1 { font-size: 42px; }
     h2 { font-size: 30px; }
 
+    p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.7;
+      color: #eee;
+    }
+
     .btn {
-      padding: 12px 24px;
-      border-radius: 25px;
+      padding: 12px 25px;
+      border-radius: 30px;
+      background: white;
+      color: black;
       text-decoration: none;
-      margin: 10px;
       display: inline-block;
-      font-weight: 500;
+      margin-top: 20px;
       transition: 0.3s;
     }
 
-    .primary { background: black; color: white; }
-    .primary:hover { transform: scale(1.05); }
+    .btn:hover {
+      transform: scale(1.1);
+    }
 
     .grid {
       display: grid;
@@ -47,56 +96,45 @@
     }
 
     .card {
-      background: white;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(12px);
       padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-      text-align: left;
+      border-radius: 20px;
       transition: 0.3s;
       cursor: pointer;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .hidden {
-      display: none;
-      margin-top: 10px;
-      font-size: 14px;
+      transform: translateY(-10px);
     }
 
     footer {
-      background: #f3f3f3;
+      text-align: center;
       padding: 40px;
       font-size: 14px;
     }
   </style>
-
-  <script>
-    function toggle(id) {
-      var x = document.getElementById(id);
-      x.style.display = (x.style.display === "block") ? "none" : "block";
-    }
-  </script>
 </head>
 
 <body>
 
-<section class="hero">
+<div class="blob"></div>
+<div class="blob"></div>
+
+<section>
   <h1>Syeda Hajra</h1>
   <p>Psychologist | Integrative & Islamic Psychology</p>
   <p>Emotional, psychological, and spiritually informed care</p>
 
-  <a class="btn primary" href="https://wa.me/919380824652">Book on WhatsApp</a>
+  <a class="btn" href="https://instagram.com/YOUR_USERNAME">View Instagram</a>
 </section>
 
 <section>
   <h2>About Me</h2>
   <p>
-    I am a counselling psychologist integrating contemporary psychological approaches
-    with Islamic conceptualizations of the self including nafs, tazkiyah, and fitrah.
-    My work focuses on ethical, culturally sensitive, and meaning-centered care.
+    Counselling psychologist integrating modern therapeutic approaches with Islamic concepts
+    such as nafs, tazkiyah, and fitrah. My work is rooted in ethical, culturally sensitive,
+    and spiritually aligned care.
   </p>
 </section>
 
@@ -104,28 +142,9 @@
   <h2>Services</h2>
 
   <div class="grid">
-
-    <div class="card" onclick="toggle('s1')">
-      <h3>Psychological Assessments</h3>
-      <div id="s1" class="hidden">
-        <p>Structured cognitive, emotional, and behavioral evaluations using standardized tools and clinical formulation.</p>
-      </div>
-    </div>
-
-    <div class="card" onclick="toggle('s2')">
-      <h3>Therapy & Intervention</h3>
-      <div id="s2" class="hidden">
-        <p>Work across anxiety, trauma, relational concerns, addictions, and personality patterns using DBT, ACT, REBT, and IFS.</p>
-      </div>
-    </div>
-
-    <div class="card" onclick="toggle('s3')">
-      <h3>Islamic Integrative Counselling</h3>
-      <div id="s3" class="hidden">
-        <p>Faith-sensitive therapy addressing spiritual distress, guilt, identity struggles, and meaning-making.</p>
-      </div>
-    </div>
-
+    <div class="card">Psychological Assessments</div>
+    <div class="card">Therapy & Intervention</div>
+    <div class="card">Islamic Integrative Counselling</div>
   </div>
 </section>
 
@@ -133,27 +152,10 @@
   <h2>Experience</h2>
 
   <div class="grid">
-
-    <div class="card">
-      <h3>Shifaa Hospital</h3>
-      <p>Psychologist (Current)</p>
-    </div>
-
-    <div class="card">
-      <h3>Rehma Care</h3>
-      <p>Marital, addiction, trauma, and palliative care counselling</p>
-    </div>
-
-    <div class="card">
-      <h3>Ruh Care</h3>
-      <p>Islamic integrative therapy for spiritual and emotional concerns</p>
-    </div>
-
-    <div class="card">
-      <h3>Heart It Out</h3>
-      <p>Worked with young adults on depression, anxiety, trauma, and burnout</p>
-    </div>
-
+    <div class="card">Shifaa Hospital (Current)</div>
+    <div class="card">Rehma Care</div>
+    <div class="card">Ruh Care</div>
+    <div class="card">Heart It Out</div>
   </div>
 </section>
 
@@ -161,35 +163,32 @@
   <h2>Testimonials</h2>
 
   <div class="grid">
-    <div class="card">
-      <p>"Her approach is compassionate and deeply understanding. I felt heard without judgment."</p>
-    </div>
-
-    <div class="card">
-      <p>"A rare blend of clinical skill and spiritual sensitivity."</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Resources</h2>
-
-  <div class="grid">
-    <div class="card">Emotional regulation strategies</div>
-    <div class="card">Parent guidance</div>
-    <div class="card">Faith & mental health insights</div>
+    <div class="card">“Deeply understanding and non-judgmental.”</div>
+    <div class="card">“A rare blend of clinical and spiritual care.”</div>
   </div>
 </section>
 
 <section>
   <h2>Contact</h2>
-  <p>Email: therapybyhajra@gmail.com</p>
-  <p><a href="https://wa.me/919380824652">Chat on WhatsApp</a></p>
+  <p>therapybyhajra@gmail.com</p>
 </section>
 
 <footer>
   All services are conducted with informed consent and confidentiality.
 </footer>
+
+<script>
+  const sections = document.querySelectorAll("section");
+
+  window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if(top < window.innerHeight - 100){
+        sec.classList.add("show");
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
