@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   
   <!-- ========== BROWSER TAB TITLE ========== -->
-  <title>Syeda Hajra | Psychologist – Calm · Therapy · Workshops · POSH Training</title>
+  <title>Syeda Hajra | Psychologist – Therapy · Workshops · POSH Training · Research</title>
   
-  <!-- ========== YOUR LOGO AS FAVICON (browser tab icon) ========== -->
+  <!-- ========== YOUR LOGO AS FAVICON ========== -->
   <link rel="icon" type="image/png" href="https://i.postimg.cc/jjHwNBT2/Untitled-design-(1).png">
   
-  <meta name="description" content="Syeda Hajra | Psychologist. Integrative therapy, POSH training, behavioural interventions for children, lectures, and Islamic psychology.">
+  <meta name="description" content="Syeda Hajra | Psychologist. Integrative therapy, POSH training, behavioural interventions, research, and Islamic psychology.">
   
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
@@ -25,20 +24,22 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #fef9f2;
-      color: #3a2c28;
+      background: #f5efe8;
+      color: #2c241f;
       line-height: 1.5;
       scroll-behavior: smooth;
     }
 
-    /* === YOUR CUSTOM COLOR THEME === */
+    /* === DEEPER, RICHER AESTHETIC PALETTE (visible but calm) === */
     :root {
-      --primary-dark: #4a2f2a;
-      --primary-accent: #c4786a;
-      --secondary-sand: #e8dccc;
-      --soft-cream: #fef8ef;
-      --warm-brown: #8b6b5e;
-      --highlight: #d69e7c;
+      --primary-deep: #3d2b24;
+      --primary-warm: #b86b5a;
+      --accent-terracotta: #d47a66;
+      --sand-deep: #d6c4b0;
+      --cream-warm: #fef7ed;
+      --muted-olive: #8f7a6b;
+      --highlight-glint: #e08e78;
+      --card-bg: #ffffff;
     }
 
     .container {
@@ -50,10 +51,10 @@
     /* header */
     .site-header {
       padding: 1.2rem 0 1rem;
-      border-bottom: 2px solid #e5d9cd;
+      border-bottom: 2px solid #e2d4c6;
       margin-bottom: 1rem;
-      background: rgba(254, 249, 242, 0.95);
-      backdrop-filter: blur(4px);
+      background: rgba(245, 239, 232, 0.96);
+      backdrop-filter: blur(6px);
       position: sticky;
       top: 0;
       z-index: 10;
@@ -77,16 +78,17 @@
       height: 52px;
       object-fit: contain;
       border-radius: 14px;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
     }
     .logo-text h1 {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #4a2f2a;
+      color: #3d2b24;
       letter-spacing: -0.3px;
     }
     .logo-text p {
       font-size: 0.7rem;
-      color: #b28b6f;
+      color: #a58b78;
       font-weight: 500;
     }
 
@@ -99,12 +101,12 @@
     .nav-links a {
       text-decoration: none;
       font-weight: 500;
-      color: #8b6b5e;
+      color: #6f5646;
       transition: 0.2s;
       font-size: 0.9rem;
     }
     .nav-links a:hover {
-      color: #c4786a;
+      color: #b86b5a;
       text-decoration: underline;
       text-underline-offset: 6px;
     }
@@ -122,22 +124,23 @@
       border: 1px solid transparent;
     }
     .btn-primary {
-      background: #c4786a;
+      background: #b86b5a;
       color: white;
-      box-shadow: 0 2px 8px rgba(196, 120, 106, 0.25);
+      box-shadow: 0 4px 10px rgba(184, 107, 90, 0.3);
     }
     .btn-primary:hover {
-      background: #a85f52;
+      background: #9c5849;
       transform: translateY(-2px);
     }
     .btn-outline {
-      border: 1px solid #dccfc3;
+      border: 1px solid #cfbcab;
       background: white;
-      color: #c4786a;
+      color: #b86b5a;
     }
     .btn-outline:hover {
-      border-color: #c4786a;
-      background: #fffaf5;
+      border-color: #b86b5a;
+      background: #fffbf6;
+      transform: translateY(-1px);
     }
 
     section {
@@ -154,15 +157,15 @@
     .section-title {
       font-size: 2rem;
       font-weight: 700;
-      color: #9e6b5c;
+      color: #aa6b5a;
       margin-bottom: 0.5rem;
       letter-spacing: -0.3px;
     }
     .section-subhead {
-      color: #b28b6f;
+      color: #9a7f6b;
       margin-bottom: 2rem;
       font-size: 0.9rem;
-      border-left: 4px solid #d6b5a2;
+      border-left: 4px solid #d4aa94;
       padding-left: 1rem;
     }
     .text-center {
@@ -176,24 +179,24 @@
     .hero h2 {
       font-size: 3rem;
       font-weight: 800;
-      color: #5a3a32;
+      color: #4a3128;
       letter-spacing: -0.02em;
     }
     .hero-tag {
       font-size: 1.2rem;
       font-weight: 500;
-      color: #c4786a;
+      color: #c47a68;
       margin: 0.5rem 0;
     }
     .hero p {
       max-width: 620px;
       margin: 1rem auto;
-      color: #8b6b5e;
+      color: #8b6f5e;
       font-size: 0.95rem;
     }
 
     /* Cards */
-    .grid-2, .grid-3, .grid-train, .grid-exp {
+    .grid-2, .grid-3, .grid-train, .grid-exp, .grid-research {
       display: grid;
       gap: 1.8rem;
     }
@@ -201,34 +204,35 @@
     .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
     .grid-train { grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
     .grid-exp { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .grid-research { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 
     .card {
-      background: white;
+      background: #ffffff;
       border-radius: 28px;
       padding: 1.6rem;
       border: 1px solid #e8dccc;
       transition: all 0.25s;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.02);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
     }
     .card:hover {
       transform: translateY(-6px);
-      border-color: #d6b59e;
-      box-shadow: 0 22px 28px -12px rgba(196, 120, 106, 0.12);
+      border-color: #d4aa94;
+      box-shadow: 0 22px 28px -12px rgba(184, 107, 90, 0.15);
     }
     .card-icon {
       font-size: 2rem;
-      color: #d69e7c;
+      color: #d47a66;
       margin-bottom: 0.8rem;
     }
     .card h3 {
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
-      color: #5a3a32;
+      color: #4a3128;
     }
     .card p {
       font-size: 0.85rem;
-      color: #8b6b5e;
+      color: #7a5f4e;
       line-height: 1.45;
     }
     .badge-list {
@@ -243,50 +247,50 @@
       border-radius: 20px;
       font-size: 0.7rem;
       font-weight: 600;
-      color: #c4786a;
+      color: #c47a68;
     }
 
     .exp-card {
-      background: white;
+      background: #ffffff;
       border-radius: 24px;
       padding: 1.4rem;
-      border-left: 6px solid #d6b59e;
+      border-left: 6px solid #d4aa94;
       transition: 0.2s;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
     }
     .exp-card:hover {
       transform: translateX(4px);
-      background: #fffbf7;
+      background: #fffbf6;
     }
     .exp-card h3 {
       font-size: 1.2rem;
       font-weight: 700;
-      color: #5a3a32;
+      color: #4a3128;
       margin-bottom: 0.3rem;
     }
     .exp-dates {
       font-size: 0.7rem;
-      color: #c4786a;
+      color: #c47a68;
       font-weight: 500;
       margin-bottom: 0.4rem;
       letter-spacing: 0.3px;
     }
 
     .testimonial-card {
-      background: white;
+      background: #ffffff;
       border-radius: 24px;
       padding: 1.4rem;
       border: 1px solid #e8dccc;
     }
     .testimonial-text {
       font-size: 0.85rem;
-      color: #5a3a32;
+      color: #4a3128;
       margin: 0.7rem 0;
       line-height: 1.5;
       font-style: normal;
     }
     .stars {
-      color: #d6b59e;
+      color: #d4aa94;
       font-size: 0.7rem;
       margin-top: 0.3rem;
     }
@@ -307,18 +311,18 @@
       border-radius: 60px;
       font-size: 0.9rem;
       font-weight: 500;
-      color: #c4786a;
+      color: #c47a68;
       margin: 1rem 0;
       border: 1px solid #e2d2c2;
     }
 
     footer {
-      border-top: 1px solid #e8dccc;
+      border-top: 1px solid #e2d4c6;
       padding: 2rem 0;
       margin-top: 1rem;
       text-align: center;
       font-size: 0.75rem;
-      color: #b28b6f;
+      color: #9a7f6b;
     }
     hr {
       border: none;
@@ -352,6 +356,7 @@
         <a href="#services">Services</a>
         <a href="#training">Training</a>
         <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </div>
@@ -362,7 +367,7 @@
   <section id="hero" class="hero show">
     <h2>Syeda Hajra</h2>
     <div class="hero-tag">Psychologist | Integrative & Islamic Psychology</div>
-    <p>Therapy · POSH training · Behavioural interventions for children · Lectures & wellbeing workshops</p>
+    <p>Therapy · POSH training · Behavioural interventions for children · Lectures · Research</p>
     <div style="display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap;">
       <a href="https://www.instagram.com/therapybyhajra" class="btn btn-primary" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
       <a href="#contact" class="btn btn-outline"><i class="far fa-envelope"></i> Get in touch</a>
@@ -373,7 +378,7 @@
   <section id="about">
     <div class="text-center">
       <span class="section-title">About</span>
-      <div class="section-subhead" style="margin-left: auto; margin-right: auto;">Psychologist, trainer & consultant</div>
+      <div class="section-subhead" style="margin-left: auto; margin-right: auto;">Psychologist, trainer & researcher</div>
     </div>
     <div class="grid-2">
       <div class="card">
@@ -410,7 +415,7 @@
     </div>
   </section>
 
-  <!-- Training & Workshops (separate tab) -->
+  <!-- Training & Workshops -->
   <section id="training">
     <div class="text-center">
       <span class="section-title">Training & workshops</span>
@@ -427,7 +432,7 @@
     </div>
   </section>
 
-  <!-- Experience (clean, removed the specific line you asked to delete) -->
+  <!-- Experience -->
   <section id="experience">
     <div class="text-center">
       <span class="section-title">Clinical experience</span>
@@ -440,30 +445,68 @@
       <div class="exp-card"><div class="card-icon"><i class="fas fa-heartbeat"></i></div><h3>Heart It Out, Bangalore</h3><div class="exp-dates">Associate Psychologist | May – Jun 2025</div><p>Depression, trauma, OCPD, interpersonal conflicts, DBT/CBT interventions.</p></div>
     </div>
     <div class="card" style="margin-top: 1.5rem; background: #fffbf7;">
-      <p><strong>Additional training & internships:</strong> Nightingales Medical Trust (geriatric), Bangalore Neuro Centre (marital therapy, DBT, CBT), Mind and Brain Hospital (CBT, biofeedback, TMS). <strong>Research:</strong> Peer-reviewed study on Dark Triad & well-being.</p>
+      <p><strong>Additional training & internships:</strong> Nightingales Medical Trust (geriatric), Bangalore Neuro Centre (marital therapy, DBT, CBT), Mind and Brain Hospital (CBT, biofeedback, TMS).</p>
     </div>
   </section>
 
-  <!-- Testimonials (no names) -->
+  <!-- ========== NEW: PUBLICATIONS & RESEARCH SECTION ========== -->
+  <section id="research">
+    <div class="text-center">
+      <span class="section-title">Publications & research</span>
+      <div class="section-subhead" style="margin-left: auto; margin-right: auto;">Peer-reviewed studies & ongoing projects</div>
+    </div>
+    <div class="grid-research">
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-book-open"></i></div>
+        <h3>Comparative study: Dark Triad & Well-being</h3>
+        <p>Peer-reviewed journal publication examining personality traits and well-being across upper and lower socioeconomic classes in India.</p>
+        <div class="badge-list"><span class="badge">Published</span><span class="badge">Peer-reviewed</span></div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Emotional Intelligence & Academic Performance</h3>
+        <p>Correlational study among medical students exploring the relationship between emotional intelligence and academic outcomes.</p>
+        <div class="badge-list"><span class="badge">Research paper</span><span class="badge">Medical education</span></div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-female"></i></div>
+        <h3>PCOS & Anxious Attachment</h3>
+        <p>Original research project: "Exploring the Role of Anxious Attachment in Symptom Preoccupation Among Women with PCOS" – a health psychology study.</p>
+        <div class="badge-list"><span class="badge">IIT Hyderabad</span><span class="badge">Health psych</span></div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-flask"></i></div>
+        <h3>Policy-oriented research</h3>
+        <p>Literature review covering 100+ research papers for IIT Hyderabad & HACOS, linking psychological factors to health behaviours. Achieved ≈90% inter-rater reliability.</p>
+        <div class="badge-list"><span class="badge">Research intern</span><span class="badge">Policy impact</span></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top: 1rem; background: #fffbf7; text-align: center;">
+      <i class="fas fa-microscope" style="color:#c47a68; margin-right: 0.5rem;"></i> 
+      <strong>Research interests:</strong> Islamic psychology integration · Women's health (PCOS) · Personality & well-being · Spirituality in mental health.
+    </div>
+  </section>
+
+  <!-- Testimonials -->
   <section id="testimonials">
     <div class="text-center">
       <span class="section-title">Kind words</span>
       <div class="section-subhead" style="margin-left: auto; margin-right: auto;">What clients & partners share</div>
     </div>
     <div class="grid-2">
-      <div class="testimonial-card"><i class="fas fa-quote-left" style="color:#d69e7c"></i><div class="testimonial-text">“Expert POSH training that was both compliant and deeply respectful. Highly recommend for any organisation.”</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
-      <div class="testimonial-card"><i class="fas fa-quote-left" style="color:#d69e7c"></i><div class="testimonial-text">“Behavioural interventions for our students made a real difference. Professional and compassionate.”</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
-      <div class="testimonial-card"><i class="fas fa-quote-left" style="color:#d69e7c"></i><div class="testimonial-text">“Her integrative therapy helped me navigate spiritual distress without judgment. Truly healing.”</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div></div>
-      <div class="testimonial-card"><i class="fas fa-quote-left" style="color:#d69e7c"></i><div class="testimonial-text">“Engaging lecturer on workplace mental health. Practical, evidence-based, and inspiring for our team.”</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+      <div class="testimonial-card"><i class="fas fa-quote-left" style="color:#d47a66"></i><div class="testimonial-text">“Expert POSH training that was both compliant and deeply respectful. Highly recommend for any organisation.”</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+      <div class="testimonial-card"><i class="fas fa-quote-left" style="color:#d47a66"></i><div class="testimonial-text">“Behavioural interventions for our students made a real difference. Professional and compassionate.”</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+      <div class="testimonial-card"><i class="fas fa-quote-left" style="color:#d47a66"></i><div class="testimonial-text">“Her integrative therapy helped me navigate spiritual distress without judgment. Truly healing.”</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div></div>
+      <div class="testimonial-card"><i class="fas fa-quote-left" style="color:#d47a66"></i><div class="testimonial-text">“Engaging lecturer on workplace mental health. Practical, evidence-based, and inspiring for our team.”</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
     </div>
   </section>
 
-  <!-- Contact (only email + Instagram) -->
+  <!-- Contact -->
   <section id="contact">
     <div class="contact-card">
-      <i class="far fa-envelope" style="font-size: 2rem; color: #d69e7c;"></i>
-      <h3 style="font-size: 1.6rem; margin: 0.5rem 0 0.2rem; color: #5a3a32;">Let's connect</h3>
-      <p>For therapy, workshops, POSH training, or lectures — reach out.</p>
+      <i class="far fa-envelope" style="font-size: 2rem; color: #d47a66;"></i>
+      <h3 style="font-size: 1.6rem; margin: 0.5rem 0 0.2rem; color: #4a3128;">Let's connect</h3>
+      <p>For therapy, workshops, POSH training, research collaborations, or lectures — reach out.</p>
       <div class="email-badge"><i class="far fa-envelope"></i> therapybyhajra@gmail.com</div>
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
         <a href="mailto:therapybyhajra@gmail.com" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Email</a>
@@ -475,7 +518,7 @@
   </section>
 
   <footer>
-    <p>© 2025 Syeda Hajra — Psychologist | POSH Trainer | Behavioural & Islamic Integrative Specialist</p>
+    <p>© 2025 Syeda Hajra — Psychologist | POSH Trainer | Behavioural & Islamic Integrative Specialist | Researcher</p>
     <p style="margin-top: 0.2rem;">M.Sc. Clinical Psychology</p>
   </footer>
 </div>
