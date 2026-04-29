@@ -196,7 +196,7 @@
     }
 
     /* Cards */
-    .grid-2, .grid-3, .grid-train, .grid-exp, .grid-research {
+    .grid-2, .grid-3, .grid-train, .grid-exp, .grid-research, .grid-testimonials {
       display: grid;
       gap: 1.8rem;
     }
@@ -205,6 +205,7 @@
     .grid-train { grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
     .grid-exp { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
     .grid-research { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .grid-testimonials { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
 
     .card {
       background: #ffffff;
@@ -279,20 +280,40 @@
     .testimonial-card {
       background: #ffffff;
       border-radius: 24px;
-      padding: 1.4rem;
+      padding: 1.6rem;
       border: 1px solid #e8dccc;
+      transition: all 0.2s;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      border-color: #d4aa94;
+      background: #fefdf9;
     }
     .testimonial-text {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: #4a3128;
-      margin: 0.7rem 0;
-      line-height: 1.5;
+      margin: 0.8rem 0;
+      line-height: 1.55;
       font-style: normal;
+      quotes: "“" "”" "‘" "’";
+    }
+    .testimonial-text::before {
+      content: "“";
+      font-size: 1.4rem;
+      color: #d47a66;
+      margin-right: 0.2rem;
+    }
+    .testimonial-text::after {
+      content: "”";
+      font-size: 1.4rem;
+      color: #d47a66;
+      vertical-align: top;
+      line-height: 1.2;
     }
     .stars {
       color: #d4aa94;
       font-size: 0.7rem;
-      margin-top: 0.3rem;
+      margin-top: 0.5rem;
     }
 
     .contact-card {
@@ -336,6 +357,7 @@
       .hero h2 { font-size: 2.2rem; }
       .section-title { font-size: 1.8rem; }
       section { padding: 2rem 0; }
+      .grid-testimonials { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -449,7 +471,7 @@
     </div>
   </section>
 
-  <!-- ========== NEW: PUBLICATIONS & RESEARCH SECTION ========== -->
+  <!-- Publications & Research -->
   <section id="research">
     <div class="text-center">
       <span class="section-title">Publications & research</span>
@@ -458,46 +480,58 @@
     <div class="grid-research">
       <div class="card">
         <div class="card-icon"><i class="fas fa-book-open"></i></div>
-        <h3>Comparative study: Dark Triad & Well-being</h3>
-        <p>Peer-reviewed journal publication examining personality traits and well-being across upper and lower socioeconomic classes in India.</p>
+        <h3>Dark Triad & Well-being</h3>
+        <p>Peer-reviewed publication examining personality traits and well-being across upper and lower socioeconomic classes in India.</p>
         <div class="badge-list"><span class="badge">Published</span><span class="badge">Peer-reviewed</span></div>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fas fa-chart-line"></i></div>
         <h3>Emotional Intelligence & Academic Performance</h3>
         <p>Correlational study among medical students exploring the relationship between emotional intelligence and academic outcomes.</p>
-        <div class="badge-list"><span class="badge">Research paper</span><span class="badge">Medical education</span></div>
+        <div class="badge-list"><span class="badge">Research paper</span></div>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fas fa-female"></i></div>
         <h3>PCOS & Anxious Attachment</h3>
-        <p>Original research project: "Exploring the Role of Anxious Attachment in Symptom Preoccupation Among Women with PCOS" – a health psychology study.</p>
-        <div class="badge-list"><span class="badge">IIT Hyderabad</span><span class="badge">Health psych</span></div>
+        <p>Original research: "Exploring the Role of Anxious Attachment in Symptom Preoccupation Among Women with PCOS" – IIT Hyderabad.</p>
+        <div class="badge-list"><span class="badge">Health psychology</span></div>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fas fa-flask"></i></div>
         <h3>Policy-oriented research</h3>
-        <p>Literature review covering 100+ research papers for IIT Hyderabad & HACOS, linking psychological factors to health behaviours. Achieved ≈90% inter-rater reliability.</p>
-        <div class="badge-list"><span class="badge">Research intern</span><span class="badge">Policy impact</span></div>
+        <p>Literature review of 100+ papers for IIT Hyderabad & HACOS, linking psychological factors to health behaviours. 90% inter-rater reliability.</p>
+        <div class="badge-list"><span class="badge">Research intern</span></div>
       </div>
-    </div>
-    <div class="card" style="margin-top: 1rem; background: #fffbf7; text-align: center;">
-      <i class="fas fa-microscope" style="color:#c47a68; margin-right: 0.5rem;"></i> 
-      <strong>Research interests:</strong> Islamic psychology integration · Women's health (PCOS) · Personality & well-being · Spirituality in mental health.
     </div>
   </section>
 
-  <!-- Testimonials -->
+  <!-- ========== TESTIMONIALS: COPIED FROM YOUR GAMMA SITE ========== -->
   <section id="testimonials">
     <div class="text-center">
-      <span class="section-title">Kind words</span>
-      <div class="section-subhead" style="margin-left: auto; margin-right: auto;">What clients & partners share</div>
+      <span class="section-title">Client testimonials</span>
+      <div class="section-subhead" style="margin-left: auto; margin-right: auto;">Hear directly from those who have experienced the journey</div>
     </div>
-    <div class="grid-2">
-      <div class="testimonial-card"><i class="fas fa-quote-left" style="color:#d47a66"></i><div class="testimonial-text">“Expert POSH training that was both compliant and deeply respectful. Highly recommend for any organisation.”</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
-      <div class="testimonial-card"><i class="fas fa-quote-left" style="color:#d47a66"></i><div class="testimonial-text">“Behavioural interventions for our students made a real difference. Professional and compassionate.”</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
-      <div class="testimonial-card"><i class="fas fa-quote-left" style="color:#d47a66"></i><div class="testimonial-text">“Her integrative therapy helped me navigate spiritual distress without judgment. Truly healing.”</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div></div>
-      <div class="testimonial-card"><i class="fas fa-quote-left" style="color:#d47a66"></i><div class="testimonial-text">“Engaging lecturer on workplace mental health. Practical, evidence-based, and inspiring for our team.”</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+    <div class="grid-testimonials">
+      <div class="testimonial-card">
+        <div class="testimonial-text">I loved working with you — you’re such a sweet and empathetic person and did not ONCE make me feel like I was being judged. I felt very heard and seen, and explaining everything to you was so easy and smooth. You showed me aspects of certain situations and gave such fresh perspectives which I could have never realised on my own. Thank you so much for bearing with me.</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-text">Hi Miss Hajra, I hope you’re doing well! Working with you has been a truly grounding experience. Your ability to create a safe, non-judgmental space made it easier for me to open up and reflect. I’ve gained so much clarity, and your compassionate presence has genuinely helped me grow and heal in ways I didn’t expect. It was an amazing experience. Thank you once again!</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-text">Firstly thank you so much for hearing me out and talking to me about things I couldn’t talk to anyone about. You make people feel comfortable and are really sweet and understanding. You give a sense of acceptance. I loved working with you and really wish you would work a little longer.</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-text">Hello Ma’am, I really enjoyed attending the sessions and felt very comfortable speaking with you. As you may recall, I had a difficult experience with my previous therapist, so I was quite anxious about starting therapy again. But this time was completely different — thank you for creating such a safe and supportive space. It truly made a difference.</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-text">Hi Hajra, thank you so much for such an informative session. It’s been a really insightful experience for me especially as a psychology student. The tools you shared — grounding techniques and guidance about self-confidence, social anxiety and financial independence — have been extremely helpful. Your compassionate approach helped me gain confidence and start making positive changes.</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      </div>
     </div>
   </section>
 
