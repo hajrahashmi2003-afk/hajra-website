@@ -3,8 +3,7 @@
 <head>
   <title>Syeda Hajra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Google Font -->
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -16,67 +15,53 @@
     }
 
     section {
-      padding: 70px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
 
     .hero {
-      background: linear-gradient(to right, #f5f5f5, #ffffff);
+      background: linear-gradient(135deg, #e0e7ff, #fce7f3);
     }
 
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
+    h1 { font-size: 42px; }
+    h2 { font-size: 30px; margin-bottom: 20px; }
 
     p {
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .btn {
-      padding: 12px 22px;
-      margin: 10px;
+      padding: 12px 24px;
       border-radius: 25px;
       text-decoration: none;
+      margin: 10px;
       display: inline-block;
       font-weight: 500;
     }
 
-    .primary {
-      background: black;
-      color: white;
-    }
+    .primary { background: black; color: white; }
+    .secondary { border: 1px solid black; }
 
-    .secondary {
-      border: 1px solid black;
-      color: black;
-    }
-
-    .services {
+    .grid {
       display: grid;
-      gap: 20px;
-      max-width: 900px;
+      gap: 25px;
+      max-width: 1000px;
       margin: auto;
     }
 
     .card {
       background: white;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+      text-align: left;
     }
 
     footer {
-      background: #f5f5f5;
-      padding: 30px;
-      text-align: center;
+      background: #f3f3f3;
+      padding: 40px;
       font-size: 14px;
     }
   </style>
@@ -90,36 +75,71 @@
   <p>Supporting emotional, psychological, and social well-being</p>
 
   <a class="btn primary" href="https://wa.me/919380824652">Book on WhatsApp</a>
-  <a class="btn secondary" href="#services">View Services</a>
+  <a class="btn secondary" href="#services">Explore Services</a>
 </section>
 
 <section>
   <h2>About Me</h2>
   <p>
     I am a psychologist with an MSc in Psychology, working across assessment,
-    intervention, and program development. I am also pursuing Islamic Psychology
-    and Counselling (Level 1) from Al Balagh Academy. My approach is rooted in
-    ethical, culturally sensitive, and evidence-based care.
+    intervention, and program development. I am currently pursuing Islamic
+    Psychology and Counselling (Level 1) from Al Balagh Academy. My approach is
+    ethical, culturally sensitive, and evidence-based.
   </p>
 </section>
 
 <section id="services">
   <h2>Services</h2>
 
-  <div class="services">
+  <div class="grid">
     <div class="card">
       <h3>Psychological Assessments</h3>
-      <p>IQ testing, behavioral screening, and developmental evaluations.</p>
+      <p>Comprehensive evaluation of cognitive, emotional, and behavioral functioning using standardized tools.</p>
     </div>
 
     <div class="card">
       <h3>Therapy & Intervention</h3>
-      <p>Support for emotional, behavioral, and psychological concerns.</p>
+      <p>Structured support for emotional difficulties, behavioral concerns, and psychological well-being.</p>
     </div>
 
     <div class="card">
       <h3>Programs & Workshops</h3>
-      <p>Summer camps, school-based programs, and skill-building sessions.</p>
+      <p>Skill-building programs including SEL, communication, and academic development.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Experience & Education</h2>
+  <div class="grid">
+    <div class="card">
+      <p><strong>MSc Psychology</strong></p>
+      <p>Professional training in assessment, diagnosis, and intervention.</p>
+    </div>
+
+    <div class="card">
+      <p><strong>Clinical Experience</strong></p>
+      <p>Worked in multidisciplinary settings with psychiatry and speech departments.</p>
+    </div>
+
+    <div class="card">
+      <p><strong>Islamic Psychology</strong></p>
+      <p>Currently pursuing Level 1 certification from Al Balagh Academy.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Resources</h2>
+  <div class="grid">
+    <div class="card">
+      <p>Parent guidance for child development</p>
+    </div>
+    <div class="card">
+      <p>Emotional regulation strategies</p>
+    </div>
+    <div class="card">
+      <p>Study skills & learning support</p>
     </div>
   </div>
 </section>
