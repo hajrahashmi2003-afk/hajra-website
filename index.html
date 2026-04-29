@@ -10,8 +10,8 @@
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      color: #333;
       background: #fafafa;
+      color: #333;
     }
 
     section {
@@ -24,13 +24,7 @@
     }
 
     h1 { font-size: 42px; }
-    h2 { font-size: 30px; margin-bottom: 20px; }
-
-    p {
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.7;
-    }
+    h2 { font-size: 30px; }
 
     .btn {
       padding: 12px 24px;
@@ -39,10 +33,11 @@
       margin: 10px;
       display: inline-block;
       font-weight: 500;
+      transition: 0.3s;
     }
 
     .primary { background: black; color: white; }
-    .secondary { border: 1px solid black; }
+    .primary:hover { transform: scale(1.05); }
 
     .grid {
       display: grid;
@@ -57,6 +52,18 @@
       border-radius: 18px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.05);
       text-align: left;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
     }
 
     footer {
@@ -65,82 +72,112 @@
       font-size: 14px;
     }
   </style>
+
+  <script>
+    function toggle(id) {
+      var x = document.getElementById(id);
+      x.style.display = (x.style.display === "block") ? "none" : "block";
+    }
+  </script>
 </head>
 
 <body>
 
 <section class="hero">
   <h1>Syeda Hajra</h1>
-  <p>Psychologist | Assessments & Therapy</p>
-  <p>Supporting emotional, psychological, and social well-being</p>
+  <p>Psychologist | Integrative & Islamic Psychology</p>
+  <p>Emotional, psychological, and spiritually informed care</p>
 
   <a class="btn primary" href="https://wa.me/919380824652">Book on WhatsApp</a>
-  <a class="btn secondary" href="#services">Explore Services</a>
 </section>
 
 <section>
   <h2>About Me</h2>
   <p>
-    I am a psychologist with an MSc in Psychology, working across assessment,
-    intervention, and program development. I am currently pursuing Islamic
-    Psychology and Counselling (Level 1) from Al Balagh Academy. My approach is
-    ethical, culturally sensitive, and evidence-based.
+    I am a counselling psychologist integrating contemporary psychological approaches
+    with Islamic conceptualizations of the self including nafs, tazkiyah, and fitrah.
+    My work focuses on ethical, culturally sensitive, and meaning-centered care.
   </p>
 </section>
 
-<section id="services">
+<section>
   <h2>Services</h2>
 
   <div class="grid">
-    <div class="card">
+
+    <div class="card" onclick="toggle('s1')">
       <h3>Psychological Assessments</h3>
-      <p>Comprehensive evaluation of cognitive, emotional, and behavioral functioning using standardized tools.</p>
+      <div id="s1" class="hidden">
+        <p>Structured cognitive, emotional, and behavioral evaluations using standardized tools and clinical formulation.</p>
+      </div>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="toggle('s2')">
       <h3>Therapy & Intervention</h3>
-      <p>Structured support for emotional difficulties, behavioral concerns, and psychological well-being.</p>
+      <div id="s2" class="hidden">
+        <p>Work across anxiety, trauma, relational concerns, addictions, and personality patterns using DBT, ACT, REBT, and IFS.</p>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Programs & Workshops</h3>
-      <p>Skill-building programs including SEL, communication, and academic development.</p>
+    <div class="card" onclick="toggle('s3')">
+      <h3>Islamic Integrative Counselling</h3>
+      <div id="s3" class="hidden">
+        <p>Faith-sensitive therapy addressing spiritual distress, guilt, identity struggles, and meaning-making.</p>
+      </div>
     </div>
+
   </div>
 </section>
 
 <section>
-  <h2>Experience & Education</h2>
+  <h2>Experience</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Shifaa Hospital</h3>
+      <p>Psychologist (Current)</p>
+    </div>
+
+    <div class="card">
+      <h3>Rehma Care</h3>
+      <p>Marital, addiction, trauma, and palliative care counselling</p>
+    </div>
+
+    <div class="card">
+      <h3>Ruh Care</h3>
+      <p>Islamic integrative therapy for spiritual and emotional concerns</p>
+    </div>
+
+    <div class="card">
+      <h3>Heart It Out</h3>
+      <p>Worked with young adults on depression, anxiety, trauma, and burnout</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Testimonials</h2>
+
   <div class="grid">
     <div class="card">
-      <p><strong>MSc Psychology</strong></p>
-      <p>Professional training in assessment, diagnosis, and intervention.</p>
+      <p>"Her approach is compassionate and deeply understanding. I felt heard without judgment."</p>
     </div>
 
     <div class="card">
-      <p><strong>Clinical Experience</strong></p>
-      <p>Worked in multidisciplinary settings with psychiatry and speech departments.</p>
-    </div>
-
-    <div class="card">
-      <p><strong>Islamic Psychology</strong></p>
-      <p>Currently pursuing Level 1 certification from Al Balagh Academy.</p>
+      <p>"A rare blend of clinical skill and spiritual sensitivity."</p>
     </div>
   </div>
 </section>
 
 <section>
   <h2>Resources</h2>
+
   <div class="grid">
-    <div class="card">
-      <p>Parent guidance for child development</p>
-    </div>
-    <div class="card">
-      <p>Emotional regulation strategies</p>
-    </div>
-    <div class="card">
-      <p>Study skills & learning support</p>
-    </div>
+    <div class="card">Emotional regulation strategies</div>
+    <div class="card">Parent guidance</div>
+    <div class="card">Faith & mental health insights</div>
   </div>
 </section>
 
