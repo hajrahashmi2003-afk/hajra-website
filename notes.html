@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Notes & Reflections | Syeda Hajra</title>
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/g0tKQKm8/Untitled-design-(2).png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #F8F6F2;
+      color: #1F1B18;
+      line-height: 1.5;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+    .site-header {
+      padding: 1rem 0;
+      border-bottom: 1px solid #E8E0D5;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo-area { display: flex; align-items: center; gap: 0.6rem; }
+    .logo-img { width: 44px; height: 44px; object-fit: contain; border-radius: 50%; }
+    .logo-text h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1F1B18;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #6B4F3A;
+      margin-left: 1.5rem;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #1F1B18;
+      margin-bottom: 0.5rem;
+    }
+    .note-card {
+      background: white;
+      border-radius: 24px;
+      padding: 1.6rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #E8E0D5;
+      transition: 0.2s;
+    }
+    .note-card:hover { transform: translateY(-3px); border-color: #B59164; }
+    .note-date { font-size: 0.7rem; color: #A86B4F; font-weight: 600; margin-bottom: 0.3rem; }
+    .note-title { font-size: 1.3rem; font-weight: 700; color: #1F1B18; margin-bottom: 0.5rem; }
+    .note-content { color: #3A302A; line-height: 1.6; }
+    .note-category {
+      display: inline-block;
+      background: #F0EBE2;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      margin-top: 0.8rem;
+      color: #4A5E49;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #A86B4F;
+      text-decoration: none;
+    }
+    footer {
+      border-top: 1px solid #E8E0D5;
+      padding: 1.5rem 0;
+      text-align: center;
+      font-size: 0.7rem;
+      color: #6B4F3A;
+      margin-top: 2rem;
+    }
+    @media (max-width: 640px) {
+      .container { padding: 1rem; }
+      .site-header { flex-direction: column; }
+      .nav-links a { margin: 0 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header class="site-header">
+    <div class="logo-area">
+      <img class="logo-img" src="https://i.postimg.cc/g0tKQKm8/Untitled-design-(2).png" alt="Logo">
+      <div class="logo-text"><h1>Syeda Hajra</h1></div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="notes.html" style="color:#A86B4F;">Notes</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </header>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+
+  <div class="text-center">
+    <span class="section-title">Notes & Reflections</span>
+    <div class="section-subhead" style="color: #6B4F3A; margin-bottom: 2rem;">Mental health insights, tips & resources</div>
+  </div>
+
+  <!-- ========== NOTES WILL APPEAR HERE ========== -->
+  <div id="notes-container"></div>
+
+  <footer>
+    <p>© 2025 Syeda Hajra — Psychologist | Notes & Reflections</p>
+  </footer>
+</div>
+
+<script>
+  // ========== ADD YOUR NEW NOTES HERE ==========
+  // Just add a new object to the array below following the same format.
+  // Newest notes should be added at the TOP to appear first.
+  
+  const notesData = [
+    {
+      date: "April 30, 2025",
+      title: "5 Grounding Techniques For Anxiety",
+      content: "When anxiety feels overwhelming, try these simple grounding exercises: 1) Place both feet on the floor. 2) Name 5 things you see, 4 you feel, 3 you hear, 2 you smell, 1 you taste. 3) Breathe in for 4 counts, hold for 4, out for 4. 4) Hold something cold (ice cube). 5) Count backward from 100 by 7s.",
+      category: "Anxiety"
+    },
+    {
+      date: "April 28, 2025",
+      title: "Navigating Spiritual Distress",
+      content: "When faith feels distant, remember that doubt and struggle can be part of a sincere spiritual journey. The Qur'an reminds us: 'Indeed, with hardship comes ease' (94:6). Give yourself permission to feel, seek support, and know that spiritual lows often precede deep growth.",
+      category: "Spirituality & Islamic Psychology"
+    },
+    {
+      date: "April 25, 2025",
+      title: "Helping Children Regulate Emotions",
+      content: "Simple co-regulation strategies for parents: Get on their eye level, name the emotion ('I see you're really frustrated'), offer a calm presence (not solutions yet), and try a physical reset like deep breaths together or a hug. Children learn regulation by experiencing yours first.",
+      category: "Parenting & Child Behaviour"
+    },
+    {
+      date: "April 20, 2025",
+      title: "The Power of Small Wins",
+      content: "When motivation is low, aim for 'micro-actions' — one minute of journaling, a 5-minute walk, sending one email. Small wins build momentum and rewire your brain for progress rather than perfection.",
+      category: "Motivation & Growth"
+    }
+  ];
+
+  // Render notes to the page
+  function renderNotes() {
+    const container = document.getElementById('notes-container');
+    if (!container) return;
+    
+    let html = '';
+    for (let i = 0; i < notesData.length; i++) {
+      const note = notesData[i];
+      html += `
+        <div class="note-card">
+          <div class="note-date">📅 ${note.date}</div>
+          <div class="note-title">${note.title}</div>
+          <div class="note-content">${note.content}</div>
+          <span class="note-category">🏷️ ${note.category}</span>
+        </div>
+      `;
+    }
+    container.innerHTML = html;
+  }
+  
+  renderNotes();
+</script>
+
+<!-- ========== INSTRUCTIONS FOR ADDING NEW NOTES ==========
+  
+  TO ADD A NEW NOTE:
+  
+  1. Open this notes.html file in any text editor (Notepad, VS Code, etc.)
+  
+  2. Find the "notesData" array (around line 85-110)
+  
+  3. Add a NEW object at the TOP of the array (after the opening [ )
+     Copy this template:
+     
+     {
+       date: "Month Day, Year",
+       title: "Your Note Title Here",
+       content: "Your note content goes here. You can write multiple sentences.",
+       category: "Category Name"
+     },
+  
+  4. Save the file and upload it to your website again.
+  
+  EXAMPLE: Adding a new note about Ramadan:
+  
+     {
+       date: "May 1, 2025",
+       title: "Ramadan & Mental Health",
+       content: "Fasting can affect mood and energy. Prioritize rest, hydrate at suhoor, and be gentle with yourself. Spiritual practices like dhikr can also be grounding.",
+       category: "Spirituality"
+     },
+  
+  That's it! The note will automatically appear on your Notes page.
+  
+-->
+</body>
+</html>
