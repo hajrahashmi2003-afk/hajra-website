@@ -12,7 +12,7 @@
   
   <meta name="description" content="Syeda Hajra | Psychologist. Integrative therapy, POSH training, behavioural interventions, research, and Islamic psychology.">
   
-  <!-- Google Fonts: Clean + Serene (Inter body, Cormorant for headings) -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
@@ -25,36 +25,110 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #FDFBF7;
       color: #3A2F2A;
       line-height: 1.5;
       scroll-behavior: smooth;
+      position: relative;
+      background: #FDFBF7;
     }
 
-    /* ===== CALM, EARTHY AESTHETIC (inspired by Nimatullahi.org) ===== */
-    :root {
-      --cream-bg: #FDFBF7;
-      --warm-taupe: #5E4B3E;
-      --deep-charcoal: #2C241F;
-      --sage-muted: #7A8B6E;
-      --terracotta-soft: #C48A6B;
-      --sand-light: #E8DDD0;
-      --paper-white: #FFFFFF;
+    /* ===== SOFT GRADIENT BACKGROUND ===== */
+    .gradient-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background: radial-gradient(circle at 10% 20%, rgba(245, 240, 230, 0.6) 0%, rgba(235, 225, 210, 0.3) 100%);
+    }
+
+    /* ===== INTERESTING GRAPHICS ===== */
+    .bg-graphic {
+      position: fixed;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* floating organic circles */
+    .float-circle {
+      position: fixed;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(199, 170, 140, 0.12) 0%, rgba(150, 120, 90, 0.03) 100%);
+      animation: floatSlow 20s infinite ease-in-out;
+    }
+
+    .circle-1 {
+      width: 380px;
+      height: 380px;
+      top: 5%;
+      left: -8%;
+      animation-duration: 28s;
+    }
+    .circle-2 {
+      width: 520px;
+      height: 520px;
+      bottom: 0%;
+      right: -12%;
+      animation-duration: 35s;
+      animation-delay: 2s;
+    }
+    .circle-3 {
+      width: 260px;
+      height: 260px;
+      top: 40%;
+      left: 75%;
+      background: radial-gradient(circle, rgba(180, 150, 120, 0.08) 0%, rgba(120, 90, 60, 0.02) 100%);
+      animation-duration: 22s;
+      animation-delay: 1s;
+    }
+    .circle-4 {
+      width: 180px;
+      height: 180px;
+      bottom: 15%;
+      left: 5%;
+      animation-duration: 18s;
+    }
+
+    @keyframes floatSlow {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      33% { transform: translate(20px, -25px) rotate(4deg); }
+      66% { transform: translate(-15px, 15px) rotate(-2deg); }
+      100% { transform: translate(0, 0) rotate(0deg); }
+    }
+
+    /* delicate wavy line separator */
+    .wave-line {
+      width: 80px;
+      height: 4px;
+      background: repeating-linear-gradient(90deg, #C8AD8B, #C8AD8B 8px, transparent 8px, transparent 16px);
+      margin: 1rem auto 0;
+    }
+
+    /* subtle organic divider for sections */
+    .organic-divider {
+      width: 60px;
+      height: 2px;
+      background: #DCC8B0;
+      margin: 1rem auto 0;
+      border-radius: 2px;
     }
 
     .container {
       max-width: 1240px;
       margin: 0 auto;
       padding: 0 2.5rem;
+      position: relative;
+      z-index: 1;
     }
 
-    /* header — clean, minimal, airy */
+    /* header */
     .site-header {
       padding: 1.8rem 0 1.2rem;
-      border-bottom: 1px solid var(--sand-light);
+      border-bottom: 1px solid rgba(200, 180, 150, 0.4);
       margin-bottom: 1rem;
-      background: rgba(253, 251, 247, 0.96);
-      backdrop-filter: blur(4px);
+      background: rgba(253, 251, 247, 0.88);
+      backdrop-filter: blur(8px);
       position: sticky;
       top: 0;
       z-index: 10;
@@ -78,20 +152,19 @@
       height: 52px;
       object-fit: contain;
       border-radius: 50%;
-      filter: drop-shadow(0 1px 3px rgba(0,0,0,0.05));
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.05));
     }
     .logo-text h1 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.7rem;
       font-weight: 600;
-      color: var(--deep-charcoal);
+      color: #2C241F;
       letter-spacing: -0.2px;
     }
     .logo-text p {
       font-size: 0.7rem;
-      color: var(--warm-taupe);
+      color: #7A6858;
       font-weight: 400;
-      letter-spacing: 0.3px;
     }
 
     .nav-links {
@@ -103,12 +176,12 @@
     .nav-links a {
       text-decoration: none;
       font-weight: 450;
-      color: var(--warm-taupe);
+      color: #6A5848;
       transition: 0.2s;
       font-size: 0.9rem;
     }
     .nav-links a:hover {
-      color: var(--terracotta-soft);
+      color: #B38B6D;
       text-decoration: underline;
       text-underline-offset: 6px;
     }
@@ -126,23 +199,22 @@
       border: 1px solid transparent;
     }
     .btn-primary {
-      background: var(--sage-muted);
+      background: #8B7A66;
       color: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
     .btn-primary:hover {
-      background: #6A7C5E;
+      background: #6D5E4D;
       transform: translateY(-2px);
     }
     .btn-outline {
-      border: 1px solid var(--sand-light);
+      border: 1px solid #DBCEBC;
       background: white;
-      color: var(--sage-muted);
+      color: #8B7A66;
     }
     .btn-outline:hover {
-      border-color: var(--terracotta-soft);
-      background: #FDFAF5;
-      transform: translateY(-1px);
+      border-color: #B38B6D;
+      background: #FEFCF9;
     }
 
     section {
@@ -160,15 +232,15 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.2rem;
       font-weight: 600;
-      color: var(--deep-charcoal);
+      color: #2C241F;
       margin-bottom: 0.5rem;
       letter-spacing: -0.2px;
     }
     .section-subhead {
-      color: var(--warm-taupe);
+      color: #7A6858;
       margin-bottom: 2rem;
       font-size: 0.9rem;
-      border-left: 3px solid var(--terracotta-soft);
+      border-left: 3px solid #C8AD8B;
       padding-left: 1rem;
       font-weight: 350;
     }
@@ -176,7 +248,6 @@
       text-align: center;
     }
 
-    /* Hero — spacious, inviting, calm */
     .hero {
       text-align: center;
       padding: 1rem 0 1.5rem;
@@ -185,25 +256,24 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 3.2rem;
       font-weight: 600;
-      color: var(--deep-charcoal);
+      color: #2C241F;
       letter-spacing: -0.02em;
-      margin-bottom: 0.25rem;
     }
     .hero-tag {
       font-size: 1.15rem;
       font-weight: 450;
-      color: var(--terracotta-soft);
+      color: #B38B6D;
       margin: 0.5rem 0;
     }
     .hero p {
       max-width: 620px;
       margin: 1rem auto;
-      color: var(--warm-taupe);
+      color: #6A5848;
       font-size: 0.95rem;
       line-height: 1.6;
     }
 
-    /* Cards — subtle, paper-like, no heavy shadows */
+    /* Card styling */
     .grid-2, .grid-3, .grid-train, .grid-exp, .grid-research, .grid-testimonials {
       display: grid;
       gap: 2rem;
@@ -216,21 +286,23 @@
     .grid-testimonials { grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); }
 
     .card {
-      background: var(--paper-white);
-      border-radius: 24px;
+      background: rgba(255, 253, 250, 0.92);
+      backdrop-filter: blur(2px);
+      border-radius: 28px;
       padding: 1.8rem;
-      border: 1px solid var(--sand-light);
-      transition: all 0.25s ease;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+      border: 1px solid rgba(200, 180, 150, 0.35);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
     }
     .card:hover {
-      transform: translateY(-4px);
-      border-color: #DBCEBC;
-      background: #FEFCF9;
+      transform: translateY(-5px);
+      border-color: #D1BCA4;
+      background: rgba(255, 253, 250, 0.98);
+      box-shadow: 0 16px 28px -12px rgba(60, 40, 25, 0.08);
     }
     .card-icon {
       font-size: 2rem;
-      color: var(--sage-muted);
+      color: #9C8976;
       margin-bottom: 0.8rem;
     }
     .card h3 {
@@ -238,13 +310,14 @@
       font-size: 1.4rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
-      color: var(--deep-charcoal);
+      color: #2C241F;
     }
     .card p {
       font-size: 0.85rem;
-      color: var(--warm-taupe);
+      color: #6A5848;
       line-height: 1.5;
     }
+
     .badge-list {
       display: flex;
       flex-wrap: wrap;
@@ -252,84 +325,75 @@
       margin-top: 0.7rem;
     }
     .badge {
-      background: #F2EDE6;
+      background: #F0EBE4;
       padding: 0.2rem 0.7rem;
       border-radius: 20px;
       font-size: 0.7rem;
       font-weight: 500;
-      color: var(--sage-muted);
+      color: #8B7A66;
     }
 
-    /* Experience Cards — subtle left border */
     .exp-card {
-      background: var(--paper-white);
+      background: rgba(255, 253, 250, 0.92);
+      backdrop-filter: blur(2px);
       border-radius: 20px;
       padding: 1.4rem;
-      border-left: 4px solid var(--terracotta-soft);
+      border-left: 4px solid #C8AD8B;
       transition: 0.2s;
-      box-shadow: none;
-      border-top: 1px solid var(--sand-light);
-      border-right: 1px solid var(--sand-light);
-      border-bottom: 1px solid var(--sand-light);
+      border-top: 1px solid rgba(200, 180, 150, 0.35);
+      border-right: 1px solid rgba(200, 180, 150, 0.35);
+      border-bottom: 1px solid rgba(200, 180, 150, 0.35);
     }
     .exp-card:hover {
-      transform: translateX(4px);
-      background: #FEFCF9;
+      transform: translateX(5px);
+      background: rgba(255, 253, 250, 0.98);
     }
     .exp-card h3 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.25rem;
       font-weight: 600;
-      color: var(--deep-charcoal);
-      margin-bottom: 0.2rem;
+      color: #2C241F;
     }
     .exp-dates {
       font-size: 0.7rem;
-      color: var(--terracotta-soft);
+      color: #B38B6D;
       font-weight: 500;
       margin-bottom: 0.4rem;
-      letter-spacing: 0.3px;
     }
 
-    /* Testimonials — organic, flowing */
     .testimonial-card {
-      background: var(--paper-white);
+      background: rgba(255, 253, 250, 0.92);
+      backdrop-filter: blur(2px);
       border-radius: 28px;
       padding: 1.8rem;
-      border: 1px solid var(--sand-light);
-      transition: all 0.2s;
-    }
-    .testimonial-card:hover {
-      background: #FEFCF9;
-      border-color: #DBCEBC;
+      border: 1px solid rgba(200, 180, 150, 0.35);
     }
     .testimonial-text {
       font-size: 0.88rem;
       color: #4F3F36;
       margin: 0.8rem 0;
       line-height: 1.6;
-      font-style: normal;
     }
     .testimonial-text::before {
       content: "“";
       font-size: 1.6rem;
-      color: var(--terracotta-soft);
+      color: #C8AD8B;
       margin-right: 0.2rem;
       font-family: serif;
     }
     .stars {
-      color: #C9B89B;
+      color: #D4BC9A;
       font-size: 0.7rem;
       margin-top: 0.5rem;
     }
 
-    /* Contact — minimal, warm */
     .contact-card {
-      background: #FEFAF4;
-      border-radius: 32px;
+      background: rgba(254, 250, 242, 0.94);
+      backdrop-filter: blur(2px);
+      border-radius: 36px;
       padding: 2rem;
       text-align: center;
-      border: 1px solid var(--sand-light);
+      border: 1px solid rgba(200, 180, 150, 0.4);
     }
     .email-badge {
       display: inline-flex;
@@ -340,22 +404,21 @@
       border-radius: 60px;
       font-size: 0.9rem;
       font-weight: 500;
-      color: var(--sage-muted);
+      color: #8B7A66;
       margin: 1rem 0;
-      border: 1px solid var(--sand-light);
+      border: 1px solid #DBCEBC;
     }
-
     footer {
-      border-top: 1px solid var(--sand-light);
+      border-top: 1px solid rgba(200, 180, 150, 0.4);
       padding: 2rem 0;
       margin-top: 1rem;
       text-align: center;
       font-size: 0.75rem;
-      color: var(--warm-taupe);
+      color: #7A6858;
     }
     hr {
       border: none;
-      border-top: 1px solid var(--sand-light);
+      border-top: 1px solid rgba(200, 180, 150, 0.4);
       margin: 1rem 0;
     }
 
@@ -369,6 +432,15 @@
   </style>
 </head>
 <body>
+
+<!-- SOFT GRADIENT BACKGROUND -->
+<div class="gradient-bg"></div>
+
+<!-- INTERESTING GRAPHICS: floating circles + organic shapes -->
+<div class="bg-graphic float-circle circle-1"></div>
+<div class="bg-graphic float-circle circle-2"></div>
+<div class="bg-graphic float-circle circle-3"></div>
+<div class="bg-graphic float-circle circle-4"></div>
 
 <div class="container">
   <header class="site-header">
@@ -397,7 +469,8 @@
     <h2>Syeda Hajra</h2>
     <div class="hero-tag">Psychologist | Integrative & Islamic Psychology</div>
     <p>Therapy · POSH training · Behavioural interventions for children · Lectures · Research</p>
-    <div style="display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap;">
+    <div class="wave-line"></div>
+    <div style="display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
       <a href="https://www.instagram.com/therapybyhajra" class="btn btn-primary" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
       <a href="#contact" class="btn btn-outline"><i class="far fa-envelope"></i> Get in touch</a>
     </div>
@@ -414,6 +487,7 @@
       <div class="card"><div class="card-icon"><i class="fas fa-briefcase"></i></div><h3>For employers</h3><p>Workshops, POSH compliance, mental health lectures, behavioural interventions for children — tailored for schools, corporates, NGOs.</p></div>
       <div class="card"><div class="card-icon"><i class="fas fa-hand-holding-heart"></i></div><h3>For clients</h3><p>Therapy for anxiety, trauma, spiritual distress, child behaviour, and relationship concerns. Culturally sensitive & integrative.</p></div>
     </div>
+    <div class="organic-divider"></div>
   </section>
 
   <!-- Clinical Services -->
@@ -430,6 +504,7 @@
       <div class="card"><i class="fas fa-hand-holding-heart card-icon"></i><h3>Palliative & grief</h3><p>Caregiver support, anticipatory grief, end-of-life.</p></div>
       <div class="card"><i class="fas fa-clipboard-list card-icon"></i><h3>Assessments</h3><p>Psychological & cognitive evaluations.</p></div>
     </div>
+    <div class="organic-divider"></div>
   </section>
 
   <!-- Training & Workshops -->
@@ -444,9 +519,10 @@
       <div class="card"><i class="fas fa-child card-icon"></i><h3>Behavioural intervention for children</h3><p>School-based programs, emotional regulation, parent coaching.</p><div class="badge-list"><span class="badge">Schools</span><span class="badge">Child psychology</span></div></div>
       <div class="card"><i class="fas fa-users card-icon"></i><h3>Custom workshops</h3><p>Anti-bullying, Islamic wellbeing, team communication, anxiety management.</p><div class="badge-list"><span class="badge">NGOs</span><span class="badge">Universities</span></div></div>
     </div>
-    <div class="card" style="margin-top: 1.2rem; background: #FEFCF9; text-align: center;">
+    <div class="card" style="margin-top: 1.2rem; background: rgba(254, 250, 242, 0.96); text-align: center;">
       <p><i class="fas fa-calendar-alt"></i> <strong>Available for:</strong> Keynotes, full-day workshops, staff training, and ongoing consultation. Tailored content for your team.</p>
     </div>
+    <div class="organic-divider"></div>
   </section>
 
   <!-- Experience -->
@@ -461,9 +537,10 @@
       <div class="exp-card"><h3>Ruh Care</h3><div class="exp-dates">Counselling Psychologist | Dec 2025 – Present</div><p>Holistic faith-integrated therapy: self-concept, religious guilt, spiritual distress.</p></div>
       <div class="exp-card"><h3>Heart It Out, Bangalore</h3><div class="exp-dates">Associate Psychologist | May – Jun 2025</div><p>Depression, trauma, OCPD, interpersonal conflicts, DBT/CBT interventions.</p></div>
     </div>
-    <div class="card" style="margin-top: 1.5rem; background: #FEFCF9;">
+    <div class="card" style="margin-top: 1.5rem; background: rgba(254, 250, 242, 0.96);">
       <p><strong>Additional training & internships:</strong> Nightingales Medical Trust (geriatric), Bangalore Neuro Centre (marital therapy, DBT, CBT), Mind and Brain Hospital (CBT, biofeedback, TMS).</p>
     </div>
+    <div class="organic-divider"></div>
   </section>
 
   <!-- Publications & Research -->
@@ -473,33 +550,35 @@
       <div class="section-subhead" style="margin-left: auto; margin-right: auto;">Peer-reviewed studies & ongoing projects</div>
     </div>
     <div class="grid-research">
-      <div class="card"><i class="fas fa-book-open card-icon"></i><h3>Dark Triad & Well-being</h3><p>Peer-reviewed publication examining personality traits and well-being across upper and lower socioeconomic classes in India.</p><div class="badge-list"><span class="badge">Published</span></div></div>
+      <div class="card"><i class="fas fa-book-open card-icon"></i><h3>Dark Triad & Well-being</h3><p>Peer-reviewed publication examining personality traits and well-being across socioeconomic classes in India.</p><div class="badge-list"><span class="badge">Published</span></div></div>
       <div class="card"><i class="fas fa-chart-line card-icon"></i><h3>Emotional Intelligence & Academic Performance</h3><p>Correlational study among medical students exploring emotional intelligence and academic outcomes.</p><div class="badge-list"><span class="badge">Research paper</span></div></div>
       <div class="card"><i class="fas fa-female card-icon"></i><h3>PCOS & Anxious Attachment</h3><p>Original research with IIT Hyderabad: anxious attachment in symptom preoccupation among women with PCOS.</p><div class="badge-list"><span class="badge">Health psychology</span></div></div>
-      <div class="card"><i class="fas fa-flask card-icon"></i><h3>Policy-oriented research</h3><p>Literature review of 100+ papers for IIT Hyderabad & HACOS, linking psychological factors to health behaviours (90% inter-rater reliability).</p></div>
+      <div class="card"><i class="fas fa-flask card-icon"></i><h3>Policy-oriented research</h3><p>Literature review of 100+ papers for IIT Hyderabad & HACOS, linking psychological factors to health behaviours.</p></div>
     </div>
+    <div class="organic-divider"></div>
   </section>
 
-  <!-- Testimonials (from your Gamma site) -->
+  <!-- Testimonials -->
   <section id="testimonials">
     <div class="text-center">
       <span class="section-title">Client testimonials</span>
       <div class="section-subhead" style="margin-left: auto; margin-right: auto;">Hear directly from those who have experienced the journey</div>
     </div>
     <div class="grid-testimonials">
-      <div class="testimonial-card"><div class="testimonial-text">I loved working with you — you’re such a sweet and empathetic person and did not ONCE make me feel like I was being judged. I felt very heard and seen. You showed me fresh perspectives I could have never realised on my own. Thank you so much.</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
-      <div class="testimonial-card"><div class="testimonial-text">Working with you has been a truly grounding experience. Your ability to create a safe, non-judgmental space made it easier for me to open up and reflect. I’ve gained so much clarity and healing.</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
-      <div class="testimonial-card"><div class="testimonial-text">Thank you for hearing me out and talking to me about things I couldn’t talk to anyone about. You make people feel comfortable and give a sense of acceptance. I loved working with you.</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
-      <div class="testimonial-card"><div class="testimonial-text">I was anxious about starting therapy again after a difficult previous experience. But this time was completely different — thank you for creating such a safe and supportive space. It truly made a difference.</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
-      <div class="testimonial-card"><div class="testimonial-text">The tools you shared — grounding techniques and guidance about self-confidence, social anxiety and financial independence — have been extremely helpful. Your compassionate approach helped me gain confidence and start making positive changes.</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+      <div class="testimonial-card"><div class="testimonial-text">I loved working with you — you’re such a sweet and empathetic person and did not ONCE make me feel like I was being judged. I felt very heard and seen.</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+      <div class="testimonial-card"><div class="testimonial-text">Working with you has been a truly grounding experience. Your ability to create a safe, non-judgmental space made it easier for me to open up and reflect.</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+      <div class="testimonial-card"><div class="testimonial-text">Thank you for hearing me out and talking to me about things I couldn’t talk to anyone about. You make people feel comfortable and give a sense of acceptance.</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+      <div class="testimonial-card"><div class="testimonial-text">I was anxious about starting therapy again after a difficult previous experience. But this time was completely different — thank you for creating such a safe space.</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+      <div class="testimonial-card"><div class="testimonial-text">The tools you shared — grounding techniques and guidance about self-confidence, social anxiety and financial independence — have been extremely helpful.</div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
     </div>
+    <div class="organic-divider"></div>
   </section>
 
   <!-- Contact -->
   <section id="contact">
     <div class="contact-card">
-      <i class="far fa-envelope" style="font-size: 2rem; color: var(--sage-muted);"></i>
-      <h3 style="font-size: 1.6rem; margin: 0.5rem 0 0.2rem; font-family: 'Cormorant Garamond', serif; color: var(--deep-charcoal);">Let's connect</h3>
+      <i class="far fa-envelope" style="font-size: 2rem; color: #9C8976;"></i>
+      <h3 style="font-size: 1.6rem; margin: 0.5rem 0 0.2rem; font-family: 'Cormorant Garamond', serif; color: #2C241F;">Let's connect</h3>
       <p>For therapy, workshops, POSH training, research collaborations, or lectures — reach out.</p>
       <div class="email-badge"><i class="far fa-envelope"></i> therapybyhajra@gmail.com</div>
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
