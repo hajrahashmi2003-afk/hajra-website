@@ -7,7 +7,7 @@
   <!-- ========== BROWSER TAB TITLE ========== -->
   <title>Syeda Hajra | Psychologist – Therapy · Workshops · POSH Training · Research</title>
   
-  <!-- ========== FAVICON (UPDATED WITH YOUR NEW IMAGE) ========== -->
+  <!-- ========== FAVICON ========== -->
   <link rel="icon" type="image/png" href="https://i.postimg.cc/g0tKQKm8/Untitled-design-(2).png">
   
   <meta name="description" content="Syeda Hajra | Psychologist. Integrative therapy, POSH training, behavioural interventions, research, and Islamic psychology.">
@@ -105,7 +105,6 @@
       gap: 0.8rem;
     }
 
-    /* Logo area with NEW image for header */
     .logo-area {
       display: flex;
       align-items: center;
@@ -130,7 +129,6 @@
       font-weight: 500;
     }
 
-    /* ===== NAVIGATION: CENTER-ALIGNED + BOLD ===== */
     .nav-links {
       display: flex;
       justify-content: center;
@@ -151,7 +149,6 @@
       color: var(--terracotta-soft);
     }
 
-    /* buttons */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -190,7 +187,6 @@
       transform: translateY(0);
     }
 
-    /* All section titles now have EVERY word capitalized */
     .section-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2rem;
@@ -243,7 +239,6 @@
       margin: 1rem auto 0;
     }
 
-    /* Responsive grids */
     .grid-2, .grid-3, .grid-train, .grid-exp, .grid-research, .grid-testimonials, .grid-achievements {
       display: grid;
       gap: 1.2rem;
@@ -284,7 +279,6 @@
       }
     }
 
-    /* Cards */
     .card, .exp-card, .testimonial-card {
       background: var(--paper-white);
       border-radius: 24px;
@@ -434,7 +428,6 @@
   <header class="site-header">
     <div class="nav-wrapper">
       <div class="logo-area">
-        <!-- NEW HEADER LOGO USING YOUR IMAGE -->
         <img class="logo-img" src="https://i.postimg.cc/g0tKQKm8/Untitled-design-(2).png" alt="Syeda Hajra Logo">
         <div class="logo-text">
           <h1>Syeda Hajra</h1>
@@ -531,7 +524,7 @@
     </div>
   </section>
 
-  <!-- ========== NEW: ACHIEVEMENTS SECTION (GATE + DEPTHMYND) ========== -->
+  <!-- ========== ACHIEVEMENTS SECTION (GATE + DEPTHMYND) ========== -->
   <section id="achievements">
     <div class="text-center">
       <span class="section-title">Achievements & Teaching</span>
@@ -645,4 +638,11 @@
       const target = document.getElementById(targetId);
       if (target) {
         const yOffset = 80;
-        const y = target.getBoundingClientRect
+        const y = target.getBoundingClientRect().top + window.pageYOffset - yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
